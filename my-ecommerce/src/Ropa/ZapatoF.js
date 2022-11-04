@@ -1,0 +1,23 @@
+{
+    "ZapatoF";[
+        {
+                "id":"ZF001",
+                "color":"blanca",
+                "talle":"36",
+                "temporada":"verano",
+                "precio":"12000",
+                "genero":"femenino",
+                "imagen":""
+            },
+    {
+            "id":"ZF0002",
+            "color":"azul",
+            "talle":"38",
+            "temporada":"verano",
+            "precio":"25000",
+            "genero":"femenino",
+            "imagen":""
+    }
+        ]
+        
+    }
