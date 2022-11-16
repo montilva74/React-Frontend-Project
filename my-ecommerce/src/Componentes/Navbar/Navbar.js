@@ -10,7 +10,8 @@ const Navbar = ({title}) => {
 
     return (
         <>
-        <div className="container container-fluid mt-2 pt-3 pb-4 grayborder">
+        <div className="grayborder">
+        <div className="container container-fluid mt-2 pt-3 pb-4">
             <div className='row'>
                 <div className="d-flex flex-row-reverse">
                     <a className="ml-1 px-2 menu_sublink" href="/register"> REGISTRO </a>
@@ -37,15 +38,14 @@ const Navbar = ({title}) => {
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </span>
                     </div>
-
                     <div>
                         <a className='cart_link' href="/cart">
                             <FontAwesomeIcon icon={faCartShopping} />
                         </a>
                     </div>
-
                 </div>
              </div>
+        </div>
         </div>
         </>
     )

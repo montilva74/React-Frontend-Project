@@ -1,5 +1,5 @@
 .grayborder {
-    border-bottom: 1px solid #666;
+    border-bottom: 1px solid darkgray;
 }
 
 .menu_sublink {
@@ -52,9 +52,9 @@
 
 .cart_link {
     margin: 5px 10px;
-    color: darkgray;
+    color: black;
     font-size: 18px;
 }
 .cart_link:hover {
-    color: black;
+    color: darkgray;
 }
