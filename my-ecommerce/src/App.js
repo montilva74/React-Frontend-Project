@@ -1,13 +1,27 @@
-// import logo from './logo.svg';
-// import './App.css';
-
 import Login from "./Componentes/Login/Login";
-import Navbar from "./Componentes/Navbar/Navbar";
+import Register from "./Componentes/Register/Register";
+import Router from './Routes/Router'
+import Navbar from './Componentes/Navbar/Navbar'
+//import { useUser } from "reactfire";
+
 
 
 function App() {
   return (
-    <><Navbar title="Store Fashion Clothes" /><Login /></>
+    <>
+    { /*
+          <Login />
+          <Register/>
+    */ }
+
+    <Router>
+
+      <Navbar></Navbar>
+
+    </Router>
+
+    
+    </>
   );
 }
 
