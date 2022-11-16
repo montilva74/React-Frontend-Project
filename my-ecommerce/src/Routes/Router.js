@@ -4,7 +4,7 @@ import Login from '../Componentes/Login/Login'
 
 const Router = ( {children} ) => {
 
-    const Home = () => <h1></h1>;
+    const Home = () => <h1>Welcome</h1>;
     const Vista1 = () => <h1>Galeria de Imagenes de Mi Emprendimiento</h1>;
 
     return (
