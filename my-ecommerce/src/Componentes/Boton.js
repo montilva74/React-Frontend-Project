@@ -1,7 +1,7 @@
-import { Button } from 'bootstrap';
 import PropTypes from 'prop-types';
+
 export function Boton ({texto}){
-    return <button>
+    return <button class="btn btn-info">
         {texto}
     </button>
 }
