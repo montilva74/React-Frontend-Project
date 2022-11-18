@@ -243,6 +243,6 @@
         "image": "./assets/foto.jpg",
         "nombre": "nombre_de_la_prenda",
         "tipo": "tipo"
-        },
+        }
 
   ]

@@ -1,0 +1,16 @@
+
+.Footer__box{
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+
+}
+.Paragraph{
+    font-size: larger;
+    font-weight: 800;
+    color: aliceblue;
+    margin-right: 10px;
+}
