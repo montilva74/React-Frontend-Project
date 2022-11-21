@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import "./Navbar.css"
 import logo from "./logo.jpg";
@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = ({title}) => {
+
+    const [showMenSubmenu, setShowMenSubmenu] = useState(false)
 
     return (
         <>
@@ -25,10 +27,24 @@ const Navbar = ({title}) => {
                     </a>
                 </div>
                 <div className='col-7 mt-2'>
-                    <a className="menu_category" href="/register"> HOMBRES     </a>
-                    <a className="menu_category" href="/login">    MUJERES     </a>
-                    <a className="menu_category" href="/register"> NIÑOS       </a>
-                    <a className="menu_category" href="/register"> DESCUENTOS  </a>
+                    <div>
+                        <a className="menu_category" href="/register" onMouseEnter={() => setShowMenSubmenu(true)}> HOMBRES     </a>
+                        <a className="menu_category" href="/login">    MUJERES     </a>
+                        <a className="menu_category" href="/register"> NIÑOS       </a>
+                        <a className="menu_category" href="/register"> DESCUENTOS  </a>
+                    </div>
+                    { showMenSubmenu &&
+                        <div className="submenu" onMouseLeave={() => setShowMenSubmenu(false)}>
+                            <a href="/">Calzado</a>
+                            <a href="/">Chaquetas</a>
+                            <a href="/">Camisas</a>
+                            <a href="/">Pantalones</a>
+                            <a href="/">Calzado</a>
+                            <a href="/">Chaquetas</a>
+                            <a href="/">Camisas</a>
+                            <a href="/">Pantalones</a>
+                        </div>
+                    }
                 </div>
                 <div className='col-3 mt-2 d-flex justify-content-end'>
 

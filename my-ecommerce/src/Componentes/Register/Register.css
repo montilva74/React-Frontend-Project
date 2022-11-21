@@ -5,19 +5,17 @@
 }
 .title_register2{
 	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 500;
+	font-size: 20px;
 	padding-bottom: 10px;
+	font-weight: 300;
+	color: #333;
 	border-bottom: 1px solid darkgray;
-}
-.pa_r{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	margin-top: 10px;
 }
 .register_date{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	font-weight: 600;
+	margin-top: 10px;
 	margin-bottom: 5px;
 }
 .register_date input{
