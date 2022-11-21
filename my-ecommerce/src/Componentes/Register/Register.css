@@ -58,3 +58,12 @@
 	color: red;
 	font-size: 11px;
 }
+
+.error {
+	background-color: pink;
+	font-weight: bold;
+	border: 1px solid red;
+	color: red;
+	margin: 10px 0px;
+	padding: 8px;
+}

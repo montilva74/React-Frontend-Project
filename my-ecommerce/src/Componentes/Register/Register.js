@@ -1,46 +1,53 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import "./Register.css";
+import { addDoc, collection } from "firebase/firestore";
+import { useFirestore } from "reactfire";
 
 
 export default (props) => {
-    const [fname, setFname] = useState("");
-    const [lname, setLname] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [rpassword, setRpassword] = useState("");
-    
-    const auth = getAuth();
+    const [user, setUser] = useState({})
+    const [errors, setErrors] = useState([])
 
-    
-    const createUserInFirebase = async () => {
-    
-    createUserWithEmailAndPassword(auth, fname, lname, email, password, rpassword)
-    .then((userCredential) => {
-        // Signed in 
-        const user = userCredential.user;
-        console.log(user)
-    })
-    .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode)
-        alert("Enter a valid Email");
-        console.log(errorMessage)
-        alert("Enter a password longer than six digits")
-    });
-  };
+    const usersCollection = collection(useFirestore(), 'users')
+
+    console.log(user)
+
+    const CreateUserInFirebase = async (event) => {
+
+        event.preventDefault()
+
+        // Validar emails
+        if (user.email === user.remail) {
+            if (user.password === user.rpassword) {
+                const payload = {
+                    email: user.email,
+                    fecha: user.fecha,
+                    lastname: user.lname,
+                    name: user.fname,
+                    password: user.password
+                }
+                const result = await addDoc(usersCollection, payload)
+
+                console.log(result)
+
+            } else {
+                setErrors(["Las contraseñas no coinciden"])
+            }
+        } else {
+            setErrors(["Los emails no coinciden"])
+        }
+    }
 
     return (
-        <> 
-    <div className="container mt-5">
+        <>
+            <div className="container mt-5">
                 <div className="row">
                     <div className="col-12">
                         <div>
                             <h1 className="title_login">
                                 <span className="base" data-ui-id="page-title-wrapper">
-                                Crear una nueva cuenta cliente
+                                    Crear una nueva cuenta cliente
                                 </span>
                             </h1>
                         </div>
@@ -59,7 +66,7 @@ export default (props) => {
                                     </label>
                                 </div>
                                 <div className="register_date">
-                                    <input type="text" name="nombre" required onChange={(ev) => setEmail(ev.target.value)} />
+                                    <input type="text" name="nombre" required onChange={(ev) => setUser({...user, fname: ev.target.value})} />
                                 </div>
                                 <div className="register_date">
                                     <label htmlFor="apellido">
@@ -67,23 +74,23 @@ export default (props) => {
                                     </label>
                                 </div>
                                 <div className="register_date">
-                                    <input type="text" name="apellido" required onChange={(ev) => setPassword(ev.target.value)}/>
+                                    <input type="text" name="apellido" required onChange={(ev) => setUser({...user, lname: ev.target.value})} />
                                 </div>
                                 <div className="register_date">
                                     <label htmlFor="fecha">
                                         Fecha de Nacimiento <span className="requerido">*</span>
                                     </label>
                                     <div className="register_date">
-                                    <input type="date" name="fecha" id="input-fecha"/>
-                                </div>
+                                        <input type="date" name="fecha" id="input-fecha" onChange={(ev) => setUser({...user, fecha: ev.target.value})} />
+                                    </div>
                                 </div>
                                 <div className="register_date">
-                                    <label htmlFor="DNI">
+                                    <label htmlFor="dni">
                                         DNI <span className="requerido">*</span>
                                     </label>
                                     <div className="register_date">
-                                    <input type="DNI" name="DNI" required onChange={(ev) => setPassword(ev.target.value)}/>
-                                </div>
+                                        <input type="dni" name="dni" required onChange={(ev) => setUser({...user, dni: ev.target.value})} />
+                                    </div>
                                 </div>
                                 <div className="register_date">
                                     <label htmlFor="correo">
@@ -91,7 +98,7 @@ export default (props) => {
                                     </label>
                                 </div>
                                 <div className="register_date">
-                                    <input type="correo" name="correo" required onChange={(ev) => setPassword(ev.target.value)}/>
+                                    <input type="correo" name="correo" required onChange={(ev) => setUser({...user, email: ev.target.value})} />
                                 </div>
                                 <div className="register_date">
                                     <label htmlFor="correo">
@@ -99,7 +106,7 @@ export default (props) => {
                                     </label>
                                 </div>
                                 <div className="register_date">
-                                    <input type="correo" name="correo" required onChange={(ev) => setPassword(ev.target.value)}/>
+                                    <input type="correo" name="correo" required onChange={(ev) => setUser({...user, remail: ev.target.value})} />
                                 </div>
                                 <div className="register_date">
                                     <label htmlFor="password">
@@ -107,7 +114,7 @@ export default (props) => {
                                     </label>
                                 </div>
                                 <div className="register_date">
-                                    <input type="password" name="password" required onChange={(ev) => setPassword(ev.target.value)}/>
+                                    <input type="password" name="password" required onChange={(ev) => setUser({...user, password: ev.target.value})} />
                                 </div>
                                 <div className="register_date">
                                     <label htmlFor="password">
@@ -115,10 +122,10 @@ export default (props) => {
                                     </label>
                                 </div>
                                 <div className="register_date">
-                                    <input type="password" name="password" required onChange={(ev) => setPassword(ev.target.value)}/>
+                                    <input type="password" name="password" required onChange={(ev) => setUser({...user, rpassword: ev.target.value})} />
                                 </div>
                                 <div className="register_date">
-                                    <button className="primary" onClick={    createUserWithEmailAndPassword(auth, fname, lname, email, password, rpassword)}>CREAR USUARIO</button>
+                                    <button className="primary" onClick={ CreateUserInFirebase }>CREAR USUARIO</button>
                                     <a href="/Login" className="secondary">
                                         <span>¿Ya estás registrado?</span>
                                     </a>
@@ -128,7 +135,14 @@ export default (props) => {
                         </div>
                     </div>
                 </div>
+                { errors.length > 0 &&
+                    <div className="error">
+                        <ul>
+                            { errors.map( error => <li key={error}> {error} </li> )}
+                        </ul>
+                    </div>
+                }
             </div>
-    </>
+        </>
     )
 };

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "../Componentes/Register/Register";
 import Login from '../Componentes/Login/Login'
+import Resetpassword from "../Componentes/Resetpassword/Resetpassword";
 import { Favoritos } from "../Componentes/Favoritos/Favoritos";
 
 const Router = ( {children} ) => {
@@ -20,6 +21,7 @@ const Router = ( {children} ) => {
                 <Route path="/gallery"  element={<Vista1 />} />
                 <Route path="/login"    element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/resetpassword" element={<Resetpassword/>} />
             </Routes>
 
         </BrowserRouter>

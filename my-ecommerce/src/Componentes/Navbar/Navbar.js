@@ -8,7 +8,13 @@ import { faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-i
 
 const Navbar = ({title}) => {
 
-    const [showMenSubmenu, setShowMenSubmenu] = useState(false)
+    const [showSubmenu, setShowSubmenu] = useState(false)
+    const [category, setCategory] = useState(null)
+
+    const showCategory = (category) => {
+        setShowSubmenu(true)
+        setCategory(category)
+    }
 
     return (
         <>
@@ -28,21 +34,45 @@ const Navbar = ({title}) => {
                 </div>
                 <div className='col-7 mt-2'>
                     <div>
-                        <a className="menu_category" href="/register" onMouseEnter={() => setShowMenSubmenu(true)}> HOMBRES     </a>
-                        <a className="menu_category" href="/login">    MUJERES     </a>
-                        <a className="menu_category" href="/register"> NIÑOS       </a>
+                        <a className="menu_category" href="/register" onMouseEnter={() => showCategory("men")}  > HOMBRES     </a>
+                        <a className="menu_category" href="/login"    onMouseEnter={() => showCategory("women")}> MUJERES     </a>
+                        <a className="menu_category" href="/register" onMouseEnter={() => showCategory("kids")} > NIÑOS       </a>
                         <a className="menu_category" href="/register"> DESCUENTOS  </a>
                     </div>
-                    { showMenSubmenu &&
-                        <div className="submenu" onMouseLeave={() => setShowMenSubmenu(false)}>
-                            <a href="/">Calzado</a>
-                            <a href="/">Chaquetas</a>
-                            <a href="/">Camisas</a>
-                            <a href="/">Pantalones</a>
-                            <a href="/">Calzado</a>
-                            <a href="/">Chaquetas</a>
-                            <a href="/">Camisas</a>
-                            <a href="/">Pantalones</a>
+                    { showSubmenu &&
+                        <div className="submenu" onMouseLeave={() => setShowSubmenu(false)}>
+
+                            { category === "men" &&
+                                <ul>
+                                    <li><a href="/">Calzado</a>     </li>
+                                    <li><a href="/">Camperas</a>    </li>
+                                    <li><a href="/">Camisas</a>     </li>
+                                    <li><a href="/">Pantalones</a>  </li>
+                                    <li><a href="/">Bermudas</a>    </li>
+                                    <li><a href="/">Jeans</a>       </li>
+                                    <li><a href="/">Buzos</a>       </li>
+                                    <li><a href="/">Accesorios</a>  </li>
+                                </ul>
+                            }
+
+                            { category === "women" &&
+                                <ul>
+                                    <li><a href="/">Faldas</a>          </li>
+                                    <li><a href="/">Blusas</a>          </li>
+                                    <li><a href="/">Camisas</a>         </li>
+                                    <li><a href="/">Ropa Interior</a>   </li>
+                                    <li><a href="/">Deporte</a>         </li>
+                                </ul>
+                            }
+
+                            { category === "kids" &&
+                                <ul>
+                                    <li><a href="/">Bermudas</a>         </li>
+                                    <li><a href="/">Pijamas</a>          </li>
+                                    <li><a href="/">Juguetes</a>         </li>
+                                </ul>
+                            }
+
                         </div>
                     }
                 </div>

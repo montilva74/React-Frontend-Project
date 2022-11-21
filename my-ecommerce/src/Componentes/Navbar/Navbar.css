@@ -65,6 +65,10 @@
     font-size: 12px;
     background: white;
 }
+.submenu li {
+    display: inline;
+    list-style-type: none;
+}
 .submenu a {
     margin-top: 15px;
     color: #000;

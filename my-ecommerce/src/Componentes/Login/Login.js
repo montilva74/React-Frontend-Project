@@ -1,34 +1,35 @@
 import React, { useState } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useFirestore } from "reactfire";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import "./Login.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (props) => {
+const Register = (props) => {
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [login, setLogin] = useState();
-
-    const auth = getAuth();
     const navigate = useNavigate();
 
-    const loginInFirebase = async (e) => {
+    const usersCollection = collection(useFirestore(), 'users');
+
+    const LoginInFirebase = async (e) => {
 
         e.preventDefault()
 
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
-                console.log(user);
-                navigate("/", {replace: true});
-            })
-            .catch((error) => {
-                // const errorCode = error.code;
-                // const errorMessage = error.message;
-                
-                setLogin(false)
-            });
+        const q = query(usersCollection, where("email", "==", email), where("password", "==", password) );
+        const result = await getDocs(q);
+        
+        if ( result.docs && result.docs.length > 0) {
+            // Existe un registro con esos datos
+            const user = result.docs[0].data();
+            navigate('/')
+        } else {
+            console.log("Usuario no Registrado")
+            setLogin(false)
+        }
     };
 
     return (
@@ -75,10 +76,8 @@ export default (props) => {
                                     <input type="password" name="password" required onChange={(ev) => setPassword(ev.target.value)}/>
                                 </div>
                                 <div className="login_date">
-                                    <button className="primary" onClick={loginInFirebase}>INICIAR SESIÓN</button>
-                                    <a href="/" className="secondary">
-                                        <span>¿Olvidaste tu contraseña?</span>
-                                    </a>
+                                    <button className="primary" onClick={LoginInFirebase}>INICIAR SESIÓN</button>
+                                    <Link to={"/resetpassword"}><span>¿Olvidaste tu contraseña?</span></Link>
                                 </div>
                                 <div className="mt-3 requerido">* Campos requeridos</div>
                                 { login === false &&
@@ -112,3 +111,6 @@ export default (props) => {
         </>
     );
 };
+
+
+export default Register
