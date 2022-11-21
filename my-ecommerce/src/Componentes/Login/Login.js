@@ -81,7 +81,6 @@ export default (props) => {
                                     </a>
                                 </div>
                                 <div className="mt-3 requerido">* Campos requeridos</div>
-                                
                                 { login === false &&
                                     <div className="alert alert-danger pa" role="alert">
                                         Usuario o Contraseña incorrecta. Verifique sus datos e intente de nuevo

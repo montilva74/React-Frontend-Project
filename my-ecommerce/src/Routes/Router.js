@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "../Componentes/Register/Register";
 import Login from '../Componentes/Login/Login'
+import { Favoritos } from "../Componentes/Favoritos/Favoritos";
 
 const Router = ( {children} ) => {
 
-    const Home = () => <h1>Welcome</h1>;
+    const Home = () => <h1 className="mt-3">Está página está en construccion</h1>;
     const Vista1 = () => <h1>Galeria de Imagenes de Mi Emprendimiento</h1>;
 
     return (
@@ -15,7 +16,7 @@ const Router = ( {children} ) => {
 
             <Routes>
 
-                <Route path="/"         element={<Home />} />
+                <Route path="/"         element={<Favoritos />} />
                 <Route path="/gallery"  element={<Vista1 />} />
                 <Route path="/login"    element={<Login />} />
                 <Route path="/register" element={<Register />} />

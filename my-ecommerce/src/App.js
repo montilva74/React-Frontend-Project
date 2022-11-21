@@ -1,15 +1,21 @@
 import Router from './Routes/Router'
 import Navbar from './Componentes/Navbar/Navbar'
-//import { useUser } from "reactfire";
 
+import { getFirestore } from 'firebase/firestore';
+import { FirestoreProvider, useFirebaseApp } from "reactfire";
 
 
 function App() {
+
+  const firestoreInstance = getFirestore(useFirebaseApp());
+
   return (
     <>
-    <Router>
-      <Navbar></Navbar>
-    </Router>
+      <FirestoreProvider sdk={firestoreInstance}>
+        <Router>
+          <Navbar></Navbar>
+        </Router>
+      </FirestoreProvider>
     </>
   );
 }
