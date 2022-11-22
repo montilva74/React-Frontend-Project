@@ -1,0 +1,15 @@
+.carousel .carousel-item {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.mini-height {
+    height: 30px;
+    padding-top: 10px;
+}
