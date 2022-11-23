@@ -28,7 +28,7 @@ export default (props) => {
                 }
                 const result = await addDoc(usersCollection, payload)
 
-                navigate('/')
+                navigate('/login')
 
             } else {
                 setErrors(["Las contraseñas no coinciden"])
