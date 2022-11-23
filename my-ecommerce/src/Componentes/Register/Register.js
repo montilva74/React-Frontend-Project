@@ -3,15 +3,14 @@ import React, { useState } from "react";
 import "./Register.css";
 import { addDoc, collection } from "firebase/firestore";
 import { useFirestore } from "reactfire";
-
+import { useNavigate } from 'react-router-dom';
 
 export default (props) => {
     const [user, setUser] = useState({})
     const [errors, setErrors] = useState([])
 
     const usersCollection = collection(useFirestore(), 'users')
-
-    console.log(user)
+    const navigate = useNavigate();
 
     const CreateUserInFirebase = async (event) => {
 
@@ -29,7 +28,7 @@ export default (props) => {
                 }
                 const result = await addDoc(usersCollection, payload)
 
-                console.log(result)
+                navigate('/')
 
             } else {
                 setErrors(["Las contraseñas no coinciden"])
