@@ -1,0 +1,25 @@
+
+.Footer__box{
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+.Paragraph{
+    font-size: small;
+    font-weight: 800;
+    color: aliceblue;
+    margin-right: 1px;
+    margin-top: 2%; 
+}
+
+.Team8Img{
+    width: 70px;
+}
+
+.Footer_Modal__btn{
+    background-color: transparent;
+    border: none;
+}
