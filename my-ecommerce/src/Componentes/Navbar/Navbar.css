@@ -58,3 +58,23 @@
 .cart_link:hover {
     color: darkgray;
 }
+
+.submenu {
+    margin-left: 10px;
+    padding-top: 15px;
+    font-size: 12px;
+    background: white;
+}
+.submenu li {
+    display: inline;
+    list-style-type: none;
+}
+.submenu a {
+    margin-top: 15px;
+    color: #000;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.submenu a:hover {
+    color: #AAA;
+}

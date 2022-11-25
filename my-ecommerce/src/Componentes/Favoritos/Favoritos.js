@@ -1,6 +1,6 @@
 import React from "react";
 
-import { doc, collection, query, orderBy } from "firebase/firestore";
+import { doc, collection, query, orderBy, setDoc, addDoc, where } from "firebase/firestore";
 import { useFirestoreDocData, useFirestore, useFirestoreCollectionData } from "reactfire";
 
 export const Favoritos = () => {
@@ -15,11 +15,12 @@ export const Favoritos = () => {
     // Sirve para obtener los datos de TODOS los elementos de la DB
     // creo la Coleccion -> Consulta -> llamo a Firestore usando la Consulta -> data
     const usersCollection = collection(useFirestore(), 'users');
-    const usersQuery = query(usersCollection, orderBy('name', 'asc'));
+    const usersQuery = query(usersCollection, 
+                            where("email", "==", "montilva74@gmail.com"), 
+                            where("password", "==", "andres023"));
     const { usersStatus, data:users } = useFirestoreCollectionData(usersQuery, {
         idField: 'id',
     });
-
 
     if (userStatus === "loading") {
         return <p>Recibiendo info de Usuario</p>;
@@ -31,7 +32,7 @@ export const Favoritos = () => {
 
     return (
         <>
-            <h1> Un usuario en concreto: </h1>
+            { /*<h1> Un usuario en concreto: </h1>
             <p>
                 El usuario es { user?.name }
             </p>
@@ -41,9 +42,9 @@ export const Favoritos = () => {
             <h1> Lista de Usuarios </h1>
             <ul>
                 { users?.map( (u) => {
-                    return ( <li key={u.id}> { u?.name } </li> )
+                    return ( <li key={u.id}> { u?.name } { u?.lastname }</li> )
                 })}
-            </ul>
+            </ul> */}
 
         </>
     );

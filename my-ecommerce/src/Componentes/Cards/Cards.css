@@ -1,0 +1,31 @@
+.card {
+    border: none !important;
+}
+
+.card-content img {
+    filter: brightness(90%);
+}
+.card-content img:hover {
+    filter: brightness(100%);
+}
+
+.card-body {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.card-title {
+    color: #777;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-see-more a{
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+.card-see-more a:hover{
+    color: #777;
+}
