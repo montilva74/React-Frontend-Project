@@ -34,8 +34,8 @@ const Navbar = ({title}) => {
                 </div>
                 <div className='col-7 mt-2'>
                     <div>
-                        <a className="menu_category" href="/register" onMouseEnter={() => showCategory("men")}  > HOMBRES     </a>
-                        <a className="menu_category" href="/login"    onMouseEnter={() => showCategory("women")}> MUJERES     </a>
+                        <a className="menu_category" href="/categories/hombres" onMouseEnter={() => showCategory("men")}  > HOMBRES     </a>
+                        <a className="menu_category" href="/categories/mujeres"    onMouseEnter={() => showCategory("women")}> MUJERES     </a>
                         <a className="menu_category" href="/register" onMouseEnter={() => showCategory("kids")} > NIÑOS       </a>
                         <a className="menu_category" href="/register"> DESCUENTOS  </a>
                     </div>
@@ -48,28 +48,27 @@ const Navbar = ({title}) => {
                                     <li><a href="/">Camperas</a>    </li>
                                     <li><a href="/">Camisas</a>     </li>
                                     <li><a href="/">Pantalones</a>  </li>
-                                    <li><a href="/">Bermudas</a>    </li>
-                                    <li><a href="/">Jeans</a>       </li>
+                                    <li><a href="/">Remeras</a>    </li>
+                                    <li><a href="/">Zapatillas</a>       </li>
                                     <li><a href="/">Buzos</a>       </li>
-                                    <li><a href="/">Accesorios</a>  </li>
+                                    <li><a href="/">Bermudas</a>  </li>
                                 </ul>
                             }
 
                             { category === "women" &&
                                 <ul>
-                                    <li><a href="/">Faldas</a>          </li>
-                                    <li><a href="/">Blusas</a>          </li>
-                                    <li><a href="/">Camisas</a>         </li>
+                                    <li><a href="/">Remera</a>          </li>
+                                    <li><a href="/">Buzos</a>          </li>
+                                    <li><a href="/">Musculosa</a>         </li>
                                     <li><a href="/">Ropa Interior</a>   </li>
-                                    <li><a href="/">Deporte</a>         </li>
                                 </ul>
                             }
 
                             { category === "kids" &&
                                 <ul>
-                                    <li><a href="/">Bermudas</a>         </li>
-                                    <li><a href="/">Pijamas</a>          </li>
-                                    <li><a href="/">Juguetes</a>         </li>
+                                    <li><a href="/">Pantalones</a>         </li>
+                                    <li><a href="/">Buzos</a>          </li>
+                                    <li><a href="/">Trajes de Baño</a>         </li>
                                 </ul>
                             }
 
