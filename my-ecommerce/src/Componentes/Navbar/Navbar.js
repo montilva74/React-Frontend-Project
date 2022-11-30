@@ -36,7 +36,7 @@ const Navbar = ({title}) => {
                     <div>
                         <a className="menu_category" href="/categories/hombres" onMouseEnter={() => showCategory("men")}  > HOMBRES     </a>
                         <a className="menu_category" href="/categories/mujeres"    onMouseEnter={() => showCategory("women")}> MUJERES     </a>
-                        <a className="menu_category" href="/register" onMouseEnter={() => showCategory("kids")} > NIÑOS       </a>
+                        <a className="menu_category" href="/categories/niños" onMouseEnter={() => showCategory("kids")} > NIÑOS       </a>
                         <a className="menu_category" href="/register"> DESCUENTOS  </a>
                     </div>
                     { showSubmenu &&

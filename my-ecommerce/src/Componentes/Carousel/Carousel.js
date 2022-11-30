@@ -5,6 +5,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
+
+//Este componente es el carrusel que se muestra en la vista del home
 function CarouselComponent() {
 
     return (
