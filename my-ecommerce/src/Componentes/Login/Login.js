@@ -21,7 +21,7 @@ const Register = (props) => {
 
         const q = query(usersCollection, where("email", "==", email), where("password", "==", password) );
         const result = await getDocs(q);
-        
+
         if ( result.docs && result.docs.length > 0) {
             // Existe un registro con esos datos
             const user = result.docs[0].data();

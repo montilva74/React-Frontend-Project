@@ -1,4 +1,4 @@
-.card {
+.card-content {
     border: none !important;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .card-body {
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 0;
 }
 

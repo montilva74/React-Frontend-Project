@@ -1,6 +1,5 @@
 import Router from './Routes/Router'
 import Navbar from './Componentes/Navbar/Navbar'
-import Carousel from './Componentes/Carousel/Carousel';
 
 
 import { getFirestore } from 'firebase/firestore';
