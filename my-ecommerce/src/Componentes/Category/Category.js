@@ -5,11 +5,12 @@ import Banner from '../Banner/Banner';
 import TitleCategory from '../TitleCatergory/TitleCategory';
 import ProductItem from '../ProductItem/ProductItem';
 import productos from "./../../Api/products.json";
+import Ordenar from '../Ordenar/Ordenar';
 
 
 //Aqui se organizan los componentes relacionados con las categorias, para armar la vista categorias.
 export default function Category() {
-    const { category } = useParams();
+    const { category, tipo } = useParams();
 
     const catImages = { "hombres": "DC_HOMBRES_3.jpg",
                         "mujeres": "DC_MUJER_2.jpg",
@@ -28,15 +29,18 @@ export default function Category() {
                     </Col>
                     <Col xs lg="10">
                         <div>
-                            Componente de Ordenar
+                            <Ordenar></Ordenar>
                         </div>
                         <div>
                             <Container>
                                 <Row>
-
-                                { productos.map( item =>
-                                
-
+                                { productos.filter( p => {
+                                    if (!tipo) {
+                                        return p.category === category
+                                    } else {
+                                        return p.category === category && p.tipo === tipo
+                                    }
+                                }).map( item =>
                                 <Col xs lg="3" key="1">
                                     <ProductItem
                                         img={item.image}
@@ -44,9 +48,7 @@ export default function Category() {
                                         precio={item.price}
                                     ></ProductItem>
                                 </Col>
-                                
                                 ) }
-
                                 </Row>
                             </Container>
                         </div>

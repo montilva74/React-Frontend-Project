@@ -1,6 +1,7 @@
 import React from 'react';
 import "./ProductItem.css";
 
+//Este componente muestra el producto(imagen, nombre, precio)
 export default function ProductItem({id, img, name, precio, category}) {
 
   return (

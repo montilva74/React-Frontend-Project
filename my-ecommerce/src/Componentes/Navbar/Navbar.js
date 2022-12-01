@@ -44,31 +44,26 @@ const Navbar = ({title}) => {
 
                             { category === "men" &&
                                 <ul>
-                                    <li><a href="/">Calzado</a>     </li>
-                                    <li><a href="/">Camperas</a>    </li>
-                                    <li><a href="/">Camisas</a>     </li>
-                                    <li><a href="/">Pantalones</a>  </li>
-                                    <li><a href="/">Remeras</a>    </li>
-                                    <li><a href="/">Zapatillas</a>       </li>
-                                    <li><a href="/">Buzos</a>       </li>
-                                    <li><a href="/">Bermudas</a>  </li>
+                                    <li><a href="/categories/hombres/pantalones">Pantalones</a>  </li>
+                                    <li><a href="/categories/hombres/remeras">Remeras</a>    </li>
+                                    <li><a href="/categories/hombres/zapatillas">Zapatillas</a>       </li>
+                                    <li><a href="/categories/hombres/bermudas">Bermudas</a>  </li>
                                 </ul>
                             }
 
                             { category === "women" &&
                                 <ul>
-                                    <li><a href="/">Remera</a>          </li>
-                                    <li><a href="/">Buzos</a>          </li>
-                                    <li><a href="/">Musculosa</a>         </li>
-                                    <li><a href="/">Ropa Interior</a>   </li>
+                                    <li><a href="/categories/mujeres/remeras">Remera</a>          </li>
+                                    <li><a href="/categories/mujeres/buzos">Buzos</a>          </li>
+                                    <li><a href="/categories/mujeres/ropa_interior">Ropa Interior</a>   </li>
                                 </ul>
                             }
 
                             { category === "kids" &&
                                 <ul>
-                                    <li><a href="/">Pantalones</a>         </li>
-                                    <li><a href="/">Buzos</a>          </li>
-                                    <li><a href="/">Trajes de Baño</a>         </li>
+                                    <li><a href="/categories/niños/pantalones">Pantalones</a>         </li>
+                                    <li><a href="/categories/niños/buzos">Buzos</a>          </li>
+                                    <li><a href="/categories/niños/trajes_de_baño">Trajes de Baño</a>         </li>
                                 </ul>
                             }
 
