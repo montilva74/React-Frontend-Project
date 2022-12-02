@@ -96,21 +96,6 @@
         "tipo": "remeras"
     },
     {
-        "id": 8,
-        "category": "mujeres",
-        "price": 98.99,
-        "sizes": [
-            "S",
-            "M"
-        ],
-        "colors": [
-            "rosado"
-        ],
-        "image": "/assets/pantalonesrosa.jpg",
-        "nombre": "pantalones rosa",
-        "tipo": "pantalones"
-    },
-    {
         "id": 9,
         "category": "mujeres",
         "price": 5.99,
@@ -143,7 +128,7 @@
         ],
         "image": "/assets/pantys.jpg",
         "nombre": "pantys",
-        "tipo": "pantys"
+        "tipo": "ropa_interior"
     },
     {
         "id": 11,
