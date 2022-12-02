@@ -8,11 +8,11 @@ function Banner({imagen, href = "#"}) {
     return (
       <Container className='banner_home'>
         <Row>
-        <Col>
+          <Col>
             <a href={href}>
                 <img src={imagen} alt='banner'></img>
             </a>
-            </Col>
+          </Col>
         </Row>
       </Container>
     );

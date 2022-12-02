@@ -1,6 +1,7 @@
 .ordenar{
     display: flex;
     justify-content: right;
+    margin-bottom: 20px;
 }
 
 .ordenar p{

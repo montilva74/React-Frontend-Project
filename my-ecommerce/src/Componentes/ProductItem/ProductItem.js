@@ -11,7 +11,7 @@ export default function ProductItem({id, img, name, precio, category}) {
                 <img src={img} alt="producto"/>
             </div>
             <div className='product_name'>
-                <a href='/'> { name.substring(0, 20) } </a>
+                { name.substring(0, 20) }
             </div>
             <div className='product_price'>
                 ${precio}

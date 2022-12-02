@@ -1,338 +1,633 @@
 [
     {
-    "id": 2,
-    "category": "mujeres",
-    "price": 28.99,
-    "sizes": [ "XS", "S", "M"],
-    "colors": ["verde"],
-    "image": "/assets/camiseta green.jpg",
-    "nombre":"emerald green blouse",
-    "tipo": "remeras"
+        "id": 2,
+        "category": "mujeres",
+        "price": 28.99,
+        "sizes": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "colors": [
+            "verde"
+        ],
+        "image": "/assets/camiseta green.jpg",
+        "nombre": "emerald green blouse",
+        "tipo": "remeras"
     },
-{
-    "id": 3,
-    "category": "mujeres",
-    "price": 42.99,
-    "sizes": [ "XS", "S", "M", "L"],
-    "colors": ["negro", "rosado", "amarillo"],
-    "image": "/assets/86e098c6b422e932ba5fa9da6dfac2af.jpg",
-    "nombre": "melanie black top",
-    "tipo": "remeras"
+    {
+        "id": 3,
+        "category": "mujeres",
+        "price": 42.99,
+        "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L"
+        ],
+        "colors": [
+            "negro",
+            "rosado",
+            "amarillo"
+        ],
+        "image": "/assets/86e098c6b422e932ba5fa9da6dfac2af.jpg",
+        "nombre": "melanie black top",
+        "tipo": "remeras"
     },
-    {"id": 4,
-    "category": "mujeres",
-    "price": 71.99,
-    "sizes": ["S", "M", "XL"],
-    "colors": ["blanco", "rojo"],
-    "image": "/assets/Buzo Canguro Start Hoodie Sleve (Neg) Mujer.jpg",
-    "nombre": "Buzo Canguro Start Hoodie Sleve (Neg) Mujer",
-    "tipo": "buzos"
+    {
+        "id": 4,
+        "category": "mujeres",
+        "price": 71.99,
+        "sizes": [
+            "S",
+            "M",
+            "XL"
+        ],
+        "colors": [
+            "blanco",
+            "rojo"
+        ],
+        "image": "/assets/Buzo Canguro Start Hoodie Sleve (Neg) Mujer.jpg",
+        "nombre": "Buzo Canguro Start Hoodie Sleve (Neg) Mujer",
+        "tipo": "buzos"
     },
-    {"id": 5,
-    "category": "mujeres",
-    "price": 15.99,
-    "sizes": ["XS", "S", "XL"],
-    "colors": ["negro"],
-    "image": "/assets/Boxer Mely (Neg) DC Mujer.jpg",
-    "nombre": "Boxer Mely (Neg) DC Mujer",
-    "tipo": "ropa_interior"
+    {
+        "id": 5,
+        "category": "mujeres",
+        "price": 15.99,
+        "sizes": [
+            "XS",
+            "S",
+            "XL"
+        ],
+        "colors": [
+            "negro"
+        ],
+        "image": "/assets/Boxer Mely (Neg) DC Mujer.jpg",
+        "nombre": "Boxer Mely (Neg) DC Mujer",
+        "tipo": "ropa_interior"
     },
-    {"id": 6,
-    "category": "mujeres",
-    "price": 17.99,
-    "sizes": ["S"],
-    "colors": ["rosado"],
-    "image": "/assets/Musculosa Start (Ros) DC Girl.jpg",
-    "nombre": "Muculosa Start (Ros) DC Girl",
-    "tipo": "remeras"
+    {
+        "id": 6,
+        "category": "mujeres",
+        "price": 17.99,
+        "sizes": [
+            "S"
+        ],
+        "colors": [
+            "rosado"
+        ],
+        "image": "/assets/Musculosa Start (Ros) DC Girl.jpg",
+        "nombre": "Muculosa Start (Ros) DC Girl",
+        "tipo": "remeras"
     },
-    {"id": 7,
-    "category": "mujeres",
-    "price": 22.99,
-    "sizes": ["S"],
-    "colors": ["rojo"],
-    "image": "/assets/Remera DC Basic Batik(Roj) DC Mujer.jpg",
-    "nombre": "Remera DC Basic Batik(Roj) DC Mujer",
-    "tipo": "remeras"
+    {
+        "id": 7,
+        "category": "mujeres",
+        "price": 22.99,
+        "sizes": [
+            "S"
+        ],
+        "colors": [
+            "rojo"
+        ],
+        "image": "/assets/Remera DC Basic Batik(Roj) DC Mujer.jpg",
+        "nombre": "Remera DC Basic Batik(Roj) DC Mujer",
+        "tipo": "remeras"
     },
-    {"id": 8,
-    "category": "mujeres",
-    "price": 98.99,
-    "sizes": ["S", "M"],
-    "colors": ["rosado"],
-    "image": "/assets/pantalonesrosa.jpg",
-    "nombre": "pantalones rosa",
-    "tipo": "pantalones"
+    {
+        "id": 8,
+        "category": "mujeres",
+        "price": 98.99,
+        "sizes": [
+            "S",
+            "M"
+        ],
+        "colors": [
+            "rosado"
+        ],
+        "image": "/assets/pantalonesrosa.jpg",
+        "nombre": "pantalones rosa",
+        "tipo": "pantalones"
     },
-    {"id": 9,
-    "category": "mujeres",
-    "price": 5.99,
-    "sizes": ["S", "M", "L"],
-    "colors": ["rosado"],
-    "image": "/assets/Medias DC Logo Woman Sock DC Mujer.jpg",
-    "nombre": "Medias DC Logo Woman Sock DC Mujer",
-    "tipo": "ropa_interior"
+    {
+        "id": 9,
+        "category": "mujeres",
+        "price": 5.99,
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "colors": [
+            "rosado"
+        ],
+        "image": "/assets/Medias DC Logo Woman Sock DC Mujer.jpg",
+        "nombre": "Medias DC Logo Woman Sock DC Mujer",
+        "tipo": "ropa_interior"
     },
-    {"id": 10,
-    "category": "mujeres",
-    "price": 5.99,
-    "sizes": ["S", "M", "L"],
-    "colors": ["rosado", "negro", "blanco", "azul"],
-    "image": "/assets/pantys.jpg",
-    "nombre": "pantys",
-    "tipo": "pantys"
+    {
+        "id": 10,
+        "category": "mujeres",
+        "price": 5.99,
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "colors": [
+            "rosado",
+            "negro",
+            "blanco",
+            "azul"
+        ],
+        "image": "/assets/pantys.jpg",
+        "nombre": "pantys",
+        "tipo": "pantys"
     },
-    {"id": 11,
-    "category": "hombres",
-    "price": 110.99,
-    "sizes": [42,44,46,48,50,52,54],
-    "colors": ["azul", "negro"],
-    "image": "/assets/jeanHombre_01.jpg",
-    "nombre": "taverniti",
-    "tipo": "pantalones"
+    {
+        "id": 11,
+        "category": "hombres",
+        "price": 110.99,
+        "sizes": [
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54
+        ],
+        "colors": [
+            "azul",
+            "negro"
+        ],
+        "image": "/assets/jeanHombre_01.jpg",
+        "nombre": "taverniti",
+        "tipo": "pantalones"
     },
-    {"id": 12,
-    "category": "hombres",
-    "price": 123.99,
-    "sizes": [42,44,46,48,50,52,54],
-    "colors": ["azul", "negro"],
-    "image": "/assets/jeanHombre_02.jpg",
-    "nombre": "taverniti",
-    "tipo": "pantalones"
+    {
+        "id": 12,
+        "category": "hombres",
+        "price": 123.99,
+        "sizes": [
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54
+        ],
+        "colors": [
+            "azul",
+            "negro"
+        ],
+        "image": "/assets/jeanHombre_02.jpg",
+        "nombre": "taverniti",
+        "tipo": "pantalones"
     },
-    {"id": 13,
-    "category": "hombres",
-    "price": 90.99,
-    "sizes": [44,46,48,50,52],
-    "colors": ["azul", "gris"],
-    "image": "/assets/jeanHombre_03.jpg",
-    "nombre": "taverniti",
-    "tipo": "pantalones"
+    {
+        "id": 13,
+        "category": "hombres",
+        "price": 90.99,
+        "sizes": [
+            44,
+            46,
+            48,
+            50,
+            52
+        ],
+        "colors": [
+            "azul",
+            "gris"
+        ],
+        "image": "/assets/jeanHombre_03.jpg",
+        "nombre": "taverniti",
+        "tipo": "pantalones"
     },
-    {"id": 14,
-    "category": "hombres",
-    "price": 141.99,
-    "sizes": [44,46,48,50,52,54],
-    "colors": ["negro", "celeste"],
-    "image": "/assets/jeanHombre_04.jpg",
-    "nombre": "levis",
-    "tipo": "jean"
+    {
+        "id": 14,
+        "category": "hombres",
+        "price": 141.99,
+        "sizes": [
+            44,
+            46,
+            48,
+            50,
+            52,
+            54
+        ],
+        "colors": [
+            "negro",
+            "celeste"
+        ],
+        "image": "/assets/jeanHombre_04.jpg",
+        "nombre": "levis",
+        "tipo": "jean"
     },
-    {"id": 15,
-    "category": "hombres",
-    "price": 94.99,
-    "sizes": [42,44,46,48],
-    "colors": ["azul", "gris oscuro"],
-    "image": "/assets/jeanHombre_05.jpg",
-    "nombre": "levis",
-    "tipo": "pantalones"
+    {
+        "id": 15,
+        "category": "hombres",
+        "price": 94.99,
+        "sizes": [
+            42,
+            44,
+            46,
+            48
+        ],
+        "colors": [
+            "azul",
+            "gris oscuro"
+        ],
+        "image": "/assets/jeanHombre_05.jpg",
+        "nombre": "levis",
+        "tipo": "pantalones"
     },
-    {"id": 16,
-    "category": "hombres",
-    "price": 89.99,
-    "sizes": [42,44,46,48,50],
-    "colors": ["gris oscuro", "azul oscuro"],
-    "image": "/assets/jeanHombre_06.jpg",
-    "nombre": "levis",
-    "tipo": "pantalones"
+    {
+        "id": 16,
+        "category": "hombres",
+        "price": 89.99,
+        "sizes": [
+            42,
+            44,
+            46,
+            48,
+            50
+        ],
+        "colors": [
+            "gris oscuro",
+            "azul oscuro"
+        ],
+        "image": "/assets/jeanHombre_06.jpg",
+        "nombre": "levis",
+        "tipo": "pantalones"
     },
-    {"id": 17,
-    "category": "hombres",
-    "price": 115.99,
-    "sizes": [46,48,50,52,54],
-    "colors": ["azul", "gris oscuro"],
-    "image": "/assets/jeanHombre_07.jpg",
-    "nombre": "wranggler",
-    "tipo": "pantalones"
+    {
+        "id": 17,
+        "category": "hombres",
+        "price": 115.99,
+        "sizes": [
+            46,
+            48,
+            50,
+            52,
+            54
+        ],
+        "colors": [
+            "azul",
+            "gris oscuro"
+        ],
+        "image": "/assets/jeanHombre_07.jpg",
+        "nombre": "wranggler",
+        "tipo": "pantalones"
     },
-    {"id": 18,
-    "category": "hombres",
-    "price": 137.99,
-    "sizes": [42,44,46,48,50,52,54],
-    "colors": ["gris ", "celeste"],
-    "image": "/assets/jeanHombre_08.jpg",
-    "nombre": "rotula",
-    "tipo": "jean"
+    {
+        "id": 18,
+        "category": "hombres",
+        "price": 137.99,
+        "sizes": [
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54
+        ],
+        "colors": [
+            "gris ",
+            "celeste"
+        ],
+        "image": "/assets/jeanHombre_08.jpg",
+        "nombre": "rotula",
+        "tipo": "jean"
     },
-    {"id": 19,
-    "category": "hombres",
-    "price": 98.99,
-    "sizes": [44,46,48,50,52,54],
-    "colors": ["celeste", "azul"],
-    "image": "/assets/jeanHombre_09.jpg",
-    "nombre": "rotula",
-    "tipo": "pantalones"
+    {
+        "id": 19,
+        "category": "hombres",
+        "price": 98.99,
+        "sizes": [
+            44,
+            46,
+            48,
+            50,
+            52,
+            54
+        ],
+        "colors": [
+            "celeste",
+            "azul"
+        ],
+        "image": "/assets/jeanHombre_09.jpg",
+        "nombre": "rotula",
+        "tipo": "pantalones"
     },
-    {"id": 20,
-    "category": "hombres",
-    "price": 136.99,
-    "sizes": ["42","44","46","48","50","52"],
-    "colors": ["azul", "azul oscuro"],
-    "image": "/assets/jeanHombre_10.jpg",
-    "nombre": "rotula",
-    "tipo": "pantalones"
+    {
+        "id": 20,
+        "category": "hombres",
+        "price": 136.99,
+        "sizes": [
+            42,
+            44,
+            46,
+            48,
+            50,
+            52
+        ],
+        "colors": [
+            "azul",
+            "azul oscuro"
+        ],
+        "image": "/assets/jeanHombre_10.jpg",
+        "nombre": "rotula",
+        "tipo": "pantalones"
     },
-    {"id": 22,
-    "category": "mujeres",
-    "price": 30.99,
-    "sizes": ["XS", "S", "M"],
-    "colors": ["rosado"],
-    "image": "/assets/Top en Blonda Rosa.jpg",
-    "nombre": "Top en Blonda Rosa",
-    "tipo": "ropa_interior"
+    {
+        "id": 22,
+        "category": "mujeres",
+        "price": 30.99,
+        "sizes": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "colors": [
+            "rosado"
+        ],
+        "image": "/assets/Top en Blonda Rosa.jpg",
+        "nombre": "Top en Blonda Rosa",
+        "tipo": "ropa_interior"
     },
-    {"id": 23,
-    "category": "mujeres",
-    "price": 170.99,
-    "sizes": ["S", "L", "XL"],
-    "colors": ["azul"],
-    "image": "/assets/Jean Rose Baggy Blue (Azu) DC Girl.jpg",
-    "nombre": "Jean Rose Baggy Blue (Azu) DC Girl",
-    "tipo": "pantalones"
+    {
+        "id": 23,
+        "category": "mujeres",
+        "price": 170.99,
+        "sizes": [
+            "S",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "azul"
+        ],
+        "image": "/assets/Jean Rose Baggy Blue (Azu) DC Girl.jpg",
+        "nombre": "Jean Rose Baggy Blue (Azu) DC Girl",
+        "tipo": "pantalones"
     },
-    {"id": 24,
-    "category": "niños",
-    "price": 10.99,
-    "sizes": ["S", "M", "L"],
-    "colors": ["rojo"],
-    "image": "/assets/Traje de baño LANI DC Niños.jpg",
-    "nombre": "Traje de baño LANI DC Niños",
-    "tipo": "trajes_de_baño"
+    {
+        "id": 24,
+        "category": "niños",
+        "price": 10.99,
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "colors": [
+            "rojo"
+        ],
+        "image": "/assets/Traje de baño LANI DC Niños.jpg",
+        "nombre": "Traje de baño LANI DC Niños",
+        "tipo": "trajes_de_baño"
     },
-    {"id": 25,
-    "category": "niños",
-    "price": 10.99,
-    "sizes": ["S"],
-    "colors": ["gris"],
-    "image": "/assets/Jogging Riot 2 (Gri) DC Boys.jpg",
-    "nombre": "Jogging Riot 2 (Gri) DC Boys",
-    "tipo": "pantalones"
+    {
+        "id": 25,
+        "category": "niños",
+        "price": 10.99,
+        "sizes": [
+            "S"
+        ],
+        "colors": [
+            "gris"
+        ],
+        "image": "/assets/Jogging Riot 2 (Gri) DC Boys.jpg",
+        "nombre": "Jogging Riot 2 (Gri) DC Boys",
+        "tipo": "pantalones"
     },
-    {"id": 26,
-    "category": "niños",
-    "price": 10.99,
-    "sizes": ["S", "M", "L"],
-    "colors": ["amarillo"],
-    "image": "/assets/Remera MC Start (Ama) DC Niños.jpg",
-    "nombre": "Remera MC Start (Ama) DC Niños",
-    "tipo": "remeras"
+    {
+        "id": 26,
+        "category": "niños",
+        "price": 10.99,
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "colors": [
+            "amarillo"
+        ],
+        "image": "/assets/Remera MC Start (Ama) DC Niños.jpg",
+        "nombre": "Remera MC Start (Ama) DC Niños",
+        "tipo": "remeras"
     },
-    {"id": 27,
-    "category": "niños",
-    "price": 9.99,
-    "sizes": ["S", "L"],
-    "colors": ["vino"],
-    "image": "/assets/Remera MC Start Htr(Vino) DC niños.jpg",
-    "nombre": "Remera MC Start Htr(Vino) DC niños",
-    "tipo": "remeras"
+    {
+        "id": 27,
+        "category": "niños",
+        "price": 9.99,
+        "sizes": [
+            "S",
+            "L"
+        ],
+        "colors": [
+            "vino"
+        ],
+        "image": "/assets/Remera MC Start Htr(Vino) DC niños.jpg",
+        "nombre": "Remera MC Start Htr(Vino) DC niños",
+        "tipo": "remeras"
     },
-    {"id": 28,
-    "category": "hombres",
-    "price": 90.99,
-    "sizes": ["M"],
-    "colors": ["azul"],
-    "image": "/assets/Camisa ML Marshall (Azu) DC.jpg",
-    "nombre": "Camisa ML Marshall (Azu) DC",
-    "tipo": "remeras"
+    {
+        "id": 28,
+        "category": "hombres",
+        "price": 90.99,
+        "sizes": [
+            "M"
+        ],
+        "colors": [
+            "azul"
+        ],
+        "image": "/assets/Camisa ML Marshall (Azu) DC.jpg",
+        "nombre": "Camisa ML Marshall (Azu) DC",
+        "tipo": "remeras"
     },
-    {"id": 29,
-    "category": "mujeres",
-    "price": 20.99,
-    "sizes": ["M","XL"],
-    "colors": ["azul"],
-    "image": "/assets/Jogging Varsity (Neg) DC Mujer.jpg",
-    "nombre": "Jogging Varsity (Neg) DC Mujer",
-    "tipo": "pantalones"
+    {
+        "id": 29,
+        "category": "mujeres",
+        "price": 20.99,
+        "sizes": [
+            "M",
+            "XL"
+        ],
+        "colors": [
+            "azul"
+        ],
+        "image": "/assets/Jogging Varsity (Neg) DC Mujer.jpg",
+        "nombre": "Jogging Varsity (Neg) DC Mujer",
+        "tipo": "pantalones"
     },
-    {"id": 30,
-    "category": "niños",
-    "price": 14.99,
-    "sizes": ["XS","M","L"],
-    "colors": ["rojo"],
-    "image": "/assets/Buzo Canguro Start Pilot (Rojo) DC Niños.jpg",
-    "nombre": "Buzo Canguro Start Pilot (Rojo) DC Niños",
-    "tipo": "buzos"
+    {
+        "id": 30,
+        "category": "niños",
+        "price": 14.99,
+        "sizes": [
+            "XS",
+            "M",
+            "L"
+        ],
+        "colors": [
+            "rojo"
+        ],
+        "image": "/assets/Buzo Canguro Start Pilot (Rojo) DC Niños.jpg",
+        "nombre": "Buzo Canguro Start Pilot (Rojo) DC Niños",
+        "tipo": "buzos"
     },
-    {"id": 31,
-    "category": "niños",
-    "price": 14.99,
-    "sizes": ["XS","M","L"],
-    "colors": ["rojo"],
-    "image": "/assets/Buzo Canguro Destroyer (Nar) DC Boys.jpg",
-    "nombre": "Buzo Canguro Destroyer (Nar) DC Boys",
-    "tipo": "buzos"
+    {
+        "id": 31,
+        "category": "niños",
+        "price": 14.99,
+        "sizes": [
+            "XS",
+            "M",
+            "L"
+        ],
+        "colors": [
+            "rojo"
+        ],
+        "image": "/assets/Buzo Canguro Destroyer (Nar) DC Boys.jpg",
+        "nombre": "Buzo Canguro Destroyer (Nar) DC Boys",
+        "tipo": "buzos"
     },
-    {"id": 32,
-    "category": "niños",
-    "price": 18.99,
-    "sizes": ["XS","M","L"],
-    "colors": ["azul"],
-    "image": "/assets/Campera Canguro Start (Azu) DC Niños.jpg",
-    "nombre": "Campera Canguro Start (Azu) DC Niños.jpg",
-    "tipo": "campera"
+    {
+        "id": 32,
+        "category": "niños",
+        "price": 18.99,
+        "sizes": [
+            "XS",
+            "M",
+            "L"
+        ],
+        "colors": [
+            "azul"
+        ],
+        "image": "/assets/Campera Canguro Start (Azu) DC Niños.jpg",
+        "nombre": "Campera Canguro Start (Azu) DC Niños.jpg",
+        "tipo": "campera"
     },
-    {"id": 33,
-    "category": "hombres",
-    "price": 50.99,
-    "sizes": ["XS", "L", "XL"],
-    "colors": ["negro"],
-    "image": "/assets/Remera Mc Blablac Alexis (Neg).jpg",
-    "nombre": "Remera Mc Blablac Alexis (Neg)",
-    "tipo": "remeras"
+    {
+        "id": 33,
+        "category": "hombres",
+        "price": 50.99,
+        "sizes": [
+            "XS",
+            "L",
+            "XL"
+        ],
+        "colors": [
+            "negro"
+        ],
+        "image": "/assets/Remera Mc Blablac Alexis (Neg).jpg",
+        "nombre": "Remera Mc Blablac Alexis (Neg)",
+        "tipo": "remeras"
     },
-    {"id": 35,
-    "category": "hombres",
-    "price": 80.99,
-    "sizes": [42,44,46,48,50,52,54],
-    "colors": ["azul"],
-    "image": "/assets/Walkshort Worker Skinny Jogg Blue (Azu) DC.jpg",
-    "nombre": "Walkshort Worker Skinny Jogg Blue (Azu) DC",
-    "tipo": "bermudas"
+    {
+        "id": 35,
+        "category": "hombres",
+        "price": 80.99,
+        "sizes": [
+            42,
+            44,
+            46,
+            48,
+            50,
+            52,
+            54
+        ],
+        "colors": [
+            "azul"
+        ],
+        "image": "/assets/Walkshort Worker Skinny Jogg Blue (Azu) DC.jpg",
+        "nombre": "Walkshort Worker Skinny Jogg Blue (Azu) DC",
+        "tipo": "bermudas"
     },
-    {"id": 36,
-    "category": "hombres",
-    "price": 140.99,
-    "sizes": [38,39,42,44,46],
-    "colors": ["negro"],
-    "image": "/assets/Zapatillas New Flash 2 Tx (Neg) DC.jpg",
-    "nombre": "Zapatillas New Flash 2 Tx (Neg) DC",
-    "tipo": "zapatillas"
+    {
+        "id": 36,
+        "category": "hombres",
+        "price": 140.99,
+        "sizes": [
+            38,
+            39,
+            42,
+            44,
+            46
+        ],
+        "colors": [
+            "negro"
+        ],
+        "image": "/assets/Zapatillas New Flash 2 Tx (Neg) DC.jpg",
+        "nombre": "Zapatillas New Flash 2 Tx (Neg) DC",
+        "tipo": "zapatillas"
     },
-    {"id": 37,
-    "category": "hombres",
-    "price": 240.99,
-    "sizes": [38,39,44],
-    "colors": ["negro"],
-    "image": "/assets/Zapatillas Healthrow Vulc (NYG) DC.jpg",
-    "nombre": "Zapatillas Healthrow Vulc (NYG) DC",
-    "tipo": "zapatillas"
+    {
+        "id": 37,
+        "category": "hombres",
+        "price": 240.99,
+        "sizes": [
+            38,
+            39,
+            44
+        ],
+        "colors": [
+            "negro"
+        ],
+        "image": "/assets/Zapatillas Healthrow Vulc (NYG) DC.jpg",
+        "nombre": "Zapatillas Healthrow Vulc (NYG) DC",
+        "tipo": "zapatillas"
     },
-    {"id": 37,
-    "category": "hombres",
-    "price": 167.99,
-    "sizes": [38,39],
-    "colors": ["rosado"],
-    "image": "/assets/Zapatillas Manueal Re (Cre) DC.jpg",
-    "nombre": "Zapatillas Manueal Re (Cre) DC",
-    "tipo": "zapatillas"
+    {
+        "id": 99,
+        "category": "hombres",
+        "price": 167.99,
+        "sizes": [
+            38,
+            39
+        ],
+        "colors": [
+            "rosado"
+        ],
+        "image": "/assets/Zapatillas Manueal Re (Cre) DC.jpg",
+        "nombre": "Zapatillas Manueal Re (Cre) DC",
+        "tipo": "zapatillas"
     },
-    {"id": 38,
-    "category": "hombres",
-    "price": 225.99,
-    "sizes": [37,38,39],
-    "colors": ["azul"],
-    "image": "/assets/Zapatillas Midway SN Knit (AYB) DC.jpg",
-    "nombre": "Zapatillas Midway SN Knit (AYB) DC",
-    "tipo": "zapatillas"
+    {
+        "id": 38,
+        "category": "hombres",
+        "price": 225.99,
+        "sizes": [
+            37,
+            38,
+            39
+        ],
+        "colors": [
+            "azul"
+        ],
+        "image": "/assets/Zapatillas Midway SN Knit (AYB) DC.jpg",
+        "nombre": "Zapatillas Midway SN Knit (AYB) DC",
+        "tipo": "zapatillas"
     },
-    {"id": 39,
-    "category": "hombres",
-    "price": 180.99,
-    "sizes": [37,38,39],
-    "colors": ["marron"],
-    "image": "/assets/Zapatillas Pure High-Top Wc wnt (Wea) DC.jpg",
-    "nombre": "Zapatillas Pure High-Top Wc wnt (Wea) DC",
-    "tipo": "zapatillas"
+    {
+        "id": 39,
+        "category": "hombres",
+        "price": 180.99,
+        "sizes": [
+            37,
+            38,
+            39
+        ],
+        "colors": [
+            "marron"
+        ],
+        "image": "/assets/Zapatillas Pure High-Top Wc wnt (Wea) DC.jpg",
+        "nombre": "Zapatillas Pure High-Top Wc wnt (Wea) DC",
+        "tipo": "zapatillas"
     }
-
 ]

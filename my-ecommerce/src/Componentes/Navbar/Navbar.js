@@ -55,7 +55,8 @@ const Navbar = ({title}) => {
                                 <ul>
                                     <li><a href="/categories/mujeres/remeras">Remera</a>          </li>
                                     <li><a href="/categories/mujeres/buzos">Buzos</a>          </li>
-                                    <li><a href="/categories/mujeres/ropa_interior">Ropa Interior</a>   </li>
+                                    <li><a href="/categories/mujeres/ropa_interior">Ropa Interior</a></li>
+                                    <li><a href="/categories/mujeres/pantalones">Pantalones</a></li>
                                 </ul>
                             }
 
@@ -73,7 +74,7 @@ const Navbar = ({title}) => {
                 <div className='col-3 mt-2 d-flex justify-content-end'>
 
                     <div className="search_control">
-                        <input type="text" placeholder="¿Que estas buscando?" id="example-search-input" />
+                        <input type="text" placeholder="¿Que estas buscando?" id="example-search-input"/>
                         <span>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </span>
