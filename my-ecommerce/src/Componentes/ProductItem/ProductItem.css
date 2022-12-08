@@ -3,6 +3,10 @@
     text-decoration: none;
     text-transform: capitalize;
     text-align: center;
+    color: #333;
+}
+.product_a:hover{
+    color: #333;
 }
 .product{
     height: 300px;
@@ -33,7 +37,6 @@ box-shadow: 0px 0px 2px 3px rgba(222,222,218,0.73);
     margin-bottom: 15px;
     text-transform:capitalize;
 }
-
 .product_price {
     font-weight: bold;
     font-size: 20px;

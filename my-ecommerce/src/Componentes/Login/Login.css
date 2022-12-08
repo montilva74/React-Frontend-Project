@@ -60,3 +60,7 @@
 	color: red;
 	font-size: 11px;
 }
+
+.vh75 {
+	height: 75vh;
+}

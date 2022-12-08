@@ -7,6 +7,95 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dark_mode {
+  background: rgb(9, 9, 9);
+}
+.dark_mode .menu-register a:hover{
+  color: gray;
+  text-decoration: none;
+}
+.dark_mode a {
+  color: white;
+}
+
+.dark_mode .search_control {
+  background: white;
+}
+.dark_mode .search_control svg {
+  color: black;
+}
+.dark_mode .sub-category .submenu {
+  background-color: rgb(9, 9, 9);
+}
+.dark_mode .sub-category ul li a{
+  background-color: rgb(9, 9, 9);
+  color: white;
+}
+.dark_mode .sub-category ul li a:hover{
+  color: gray;
+}
+.dark_mode .mini-height {
+  color: white;
+}
+.dark_mode .card-content {
+  background: none;
+}
+.dark_mode .card-content p {
+  color: white;
+}
+.dark_mode .card-content p:hover {
+  color: gray;
+}
+.dark_mode .card-content p a {
+  color: white;
+}
+.dark_mode .card-content p a:hover {
+  color: gray;
+}
+.dark_mode .title-category{
+  color: white;
+}
+.dark_mode .ordenar p{
+  color: white;
+}
+.dark_mode .tallas-title{
+  color: white;
+}
+.dark_mode .lista_tallas div{
+  color: white;
+}
+.dark_mode .product_image{
+  background-color: white;
+}
+.dark_mode .product_name{
+  color: rgb(186, 175, 175);
+}
+.dark_mode .product_price{
+  color: rgb(186, 175, 175);
+}
+.dark_mode .register{
+  color: white;
+}
+.dark_mode .title_register2{
+  color: white;
+}
+.dark_mode .register_date button{
+  color: black;
+  background-color: white;
+}
+.dark_mode .register_date a{
+  color: white
+}
+.dark_mode .l{
+  color: white;
+}
+.dark_mode .login_date button{
+  color: black;
+  background-color: white;
+}
+.dark_mode .login_date a{
+  color: white;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

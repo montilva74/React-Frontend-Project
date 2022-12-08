@@ -4,9 +4,9 @@ import "./Navbar.css"
 import logo from "./logo.jpg";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping, faMagnifyingGlass, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = ({title}) => {
+const Navbar = ({title, isDarkMode, setIsDarkMode}) => {
 
     const [showSubmenu, setShowSubmenu] = useState(false)
     const [category, setCategory] = useState(null)
@@ -19,9 +19,13 @@ const Navbar = ({title}) => {
     return (
         <>
         <div className="grayborder">
-        <div className="container container-fluid mt-2 pt-3 pb-4">
+        <div className="container container-fluid pt-3 pb-4">
             <div className='row'>
-                <div className="d-flex flex-row-reverse">
+                <div className="menu-register d-flex justify-content-end">
+                    <button className='darkbutton' onClick={ () => setIsDarkMode( !isDarkMode )}>
+                        <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+                        { isDarkMode ? "Modo Claro" : "Modo Oscuro" } 
+                    </button>
                     <a className="ml-1 px-2 menu_sublink" href="/register"> REGISTRO </a>
                     <a className="mr-1 px-2 menu_sublink" href="/login"> INICIAR SESION </a>
                 </div>
@@ -32,7 +36,7 @@ const Navbar = ({title}) => {
                         <img className="rounded float-start logo" src={logo}  alt="logo"/>
                     </a>
                 </div>
-                <div className='col-7 mt-2'>
+                <div className=' sub-category col-7 mt-2'>
                     <div>
                         <a className="menu_category" href="/categories/hombres" onMouseEnter={() => showCategory("men")}  > HOMBRES     </a>
                         <a className="menu_category" href="/categories/mujeres"    onMouseEnter={() => showCategory("women")}> MUJERES     </a>

@@ -8,7 +8,7 @@ function MinicarouselComponent () {
   return (
     <>
     <Container className='mini-height'>
-            <Row>
+            <Row className='carousel-c'>
                 <Carousel>
                     <Carousel.Item>
                         <p className="d-block text-center"

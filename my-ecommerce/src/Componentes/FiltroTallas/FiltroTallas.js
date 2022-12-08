@@ -4,7 +4,7 @@ import "./FiltroTallas.css"
 const FiltroTallas = ({tallas, setFiltroTalla}) => {
   return (
     <>
-        <div>
+        <div className='tallas-title'>
             Tallas
         </div>
         <div className='lista_tallas'>

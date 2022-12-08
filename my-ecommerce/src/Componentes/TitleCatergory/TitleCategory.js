@@ -10,7 +10,7 @@ export default function Title_Category({name}) {
     <Container>
         <Row>
             <Col>
-                <h1 className='capitalize'>
+                <h1 className='capitalize title-category'>
                     <span>{name}</span>
                 </h1>
             </Col>
