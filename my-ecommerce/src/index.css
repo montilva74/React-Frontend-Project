@@ -96,6 +96,10 @@ body {
 .dark_mode .login_date a{
   color: white;
 }
+.dark_mode .carousel-c .slide button{
+  margin-bottom: -20px;
+  background-color: black;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
