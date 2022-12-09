@@ -23,6 +23,7 @@ const Router = ( {children} ) => {
                 <Route path="/register" element={<Register />} />
                 <Route path="/resetpassword" element={<Resetpassword/>} />
                 <Route path="/categories/:category" element={<Category />} />
+                <Route path="/categories/:category/:tipo" element={<Category />} />
             </Routes>
 
         </BrowserRouter>

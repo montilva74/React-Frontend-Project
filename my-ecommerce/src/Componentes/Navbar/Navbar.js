@@ -4,9 +4,9 @@ import "./Navbar.css"
 import logo from "./logo.jpg";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping, faMagnifyingGlass, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = ({title}) => {
+const Navbar = ({title, isDarkMode, setIsDarkMode}) => {
 
     const [showSubmenu, setShowSubmenu] = useState(false)
     const [category, setCategory] = useState(null)
@@ -19,9 +19,13 @@ const Navbar = ({title}) => {
     return (
         <>
         <div className="grayborder">
-        <div className="container container-fluid mt-2 pt-3 pb-4">
+        <div className="container container-fluid pt-3 pb-4">
             <div className='row'>
-                <div className="d-flex flex-row-reverse">
+                <div className="menu-register d-flex justify-content-end">
+                    <button className='darkbutton' onClick={ () => setIsDarkMode( !isDarkMode )}>
+                        <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+                        { isDarkMode ? "Modo Claro" : "Modo Oscuro" } 
+                    </button>
                     <a className="ml-1 px-2 menu_sublink" href="/register"> REGISTRO </a>
                     <a className="mr-1 px-2 menu_sublink" href="/login"> INICIAR SESION </a>
                 </div>
@@ -32,7 +36,7 @@ const Navbar = ({title}) => {
                         <img className="rounded float-start logo" src={logo}  alt="logo"/>
                     </a>
                 </div>
-                <div className='col-7 mt-2'>
+                <div className=' sub-category col-7 mt-2'>
                     <div>
                         <a className="menu_category" href="/categories/hombres" onMouseEnter={() => showCategory("men")}  > HOMBRES     </a>
                         <a className="menu_category" href="/categories/mujeres"    onMouseEnter={() => showCategory("women")}> MUJERES     </a>
@@ -44,31 +48,27 @@ const Navbar = ({title}) => {
 
                             { category === "men" &&
                                 <ul>
-                                    <li><a href="/">Calzado</a>     </li>
-                                    <li><a href="/">Camperas</a>    </li>
-                                    <li><a href="/">Camisas</a>     </li>
-                                    <li><a href="/">Pantalones</a>  </li>
-                                    <li><a href="/">Remeras</a>    </li>
-                                    <li><a href="/">Zapatillas</a>       </li>
-                                    <li><a href="/">Buzos</a>       </li>
-                                    <li><a href="/">Bermudas</a>  </li>
+                                    <li><a href="/categories/hombres/pantalones">Pantalones</a>  </li>
+                                    <li><a href="/categories/hombres/remeras">Remeras</a>    </li>
+                                    <li><a href="/categories/hombres/zapatillas">Zapatillas</a>       </li>
+                                    <li><a href="/categories/hombres/bermudas">Bermudas</a>  </li>
                                 </ul>
                             }
 
                             { category === "women" &&
                                 <ul>
-                                    <li><a href="/">Remera</a>          </li>
-                                    <li><a href="/">Buzos</a>          </li>
-                                    <li><a href="/">Musculosa</a>         </li>
-                                    <li><a href="/">Ropa Interior</a>   </li>
+                                    <li><a href="/categories/mujeres/remeras">Remera</a>          </li>
+                                    <li><a href="/categories/mujeres/buzos">Buzos</a>          </li>
+                                    <li><a href="/categories/mujeres/ropa_interior">Ropa Interior</a></li>
+                                    <li><a href="/categories/mujeres/pantalones">Pantalones</a></li>
                                 </ul>
                             }
 
                             { category === "kids" &&
                                 <ul>
-                                    <li><a href="/">Pantalones</a>         </li>
-                                    <li><a href="/">Buzos</a>          </li>
-                                    <li><a href="/">Trajes de Baño</a>         </li>
+                                    <li><a href="/categories/niños/pantalones">Pantalones</a>         </li>
+                                    <li><a href="/categories/niños/buzos">Buzos</a>          </li>
+                                    <li><a href="/categories/niños/trajes_de_baño">Trajes de Baño</a>         </li>
                                 </ul>
                             }
 
@@ -78,7 +78,7 @@ const Navbar = ({title}) => {
                 <div className='col-3 mt-2 d-flex justify-content-end'>
 
                     <div className="search_control">
-                        <input type="text" placeholder="¿Que estas buscando?" id="example-search-input" />
+                        <input type="text" placeholder="¿Que estas buscando?" id="example-search-input"/>
                         <span>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </span>

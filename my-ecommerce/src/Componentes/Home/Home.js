@@ -14,7 +14,7 @@ const Home = () => {
       <Cards></Cards>
       <Video></Video>
       <Cardsbottom></Cardsbottom>
-      <Banner imagen="Banner/DC-WARHOL-WEB-1920X850.jpg"></Banner>
+      <Banner imagen="Banner/DC-WARHOL-WEB-1920X850.jpg" href="/categories/hombres"></Banner>
     </>
   );
 };

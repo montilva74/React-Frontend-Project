@@ -17,7 +17,7 @@ function Cards() {
                 SKATE FOOTWEAR
               </Card.Text>
               <Card.Text className='card-see-more'>
-                <a href="/">VER MÁS &gt;</a>
+                <a href="/categories/hombres">VER MÁS &gt;</a>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -30,7 +30,7 @@ function Cards() {
                 DC SLIDES
               </Card.Text>
               <Card.Text className='card-see-more'>
-                <a href="/">COMPRAR AHORA &gt;</a>
+                <a href="/categories/hombres">COMPRAR AHORA &gt;</a>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -43,7 +43,7 @@ function Cards() {
                 DC WOMEN
               </Card.Text>
               <Card.Text className='card-see-more'>
-                <a href="/">VER MÁS &gt;</a>
+                <a href="/categories/mujeres">VER MÁS &gt;</a>
               </Card.Text>
             </Card.Body>
           </Card>

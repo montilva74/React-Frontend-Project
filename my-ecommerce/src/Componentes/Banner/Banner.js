@@ -4,15 +4,15 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import './Banner.css'
 
-function Banner({imagen}) {
+function Banner({imagen, href = "#"}) {
     return (
       <Container className='banner_home'>
         <Row>
-        <Col>
-            <a href='/'>
+          <Col>
+            <a href={href}>
                 <img src={imagen} alt='banner'></img>
             </a>
-            </Col>
+          </Col>
         </Row>
       </Container>
     );

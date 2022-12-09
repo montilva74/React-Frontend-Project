@@ -34,7 +34,7 @@ const Register = (props) => {
 
     return (
         <>
-            <div className="container mt-5">
+            <div className="container l mt-5 vh75">
                 <div className="row">
                     <div className="col-12">
                         <div>
