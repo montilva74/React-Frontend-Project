@@ -5,7 +5,8 @@ const FiltroTallas = ({tallas, setFiltroTalla}) => {
   return (
     <>
         <div className='tallas-title'>
-            Tallas
+          <p>Filtrar por</p>
+            <span>Tallas</span>
         </div>
         <div className='lista_tallas'>
             { tallas.map( t =>
