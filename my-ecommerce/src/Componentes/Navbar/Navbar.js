@@ -41,7 +41,7 @@ const Navbar = ({ title, isDarkMode, setIsDarkMode }) => {
                                 <a className="menu_category" href="/categories/hombres" onMouseEnter={() => showCategory("men")}  > HOMBRES     </a>
                                 <a className="menu_category" href="/categories/mujeres" onMouseEnter={() => showCategory("women")}> MUJERES     </a>
                                 <a className="menu_category" href="/categories/niños" onMouseEnter={() => showCategory("kids")} > NIÑOS       </a>
-                                <a className="menu_category" href="/register"> DESCUENTOS  </a>
+                                <a className="menu_category text-danger" href="/register"> DESCUENTOS  </a>
                             </div>
                         </div>
                         <div className='col-3 mt-2 d-flex justify-content-end'>
