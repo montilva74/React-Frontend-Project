@@ -1,0 +1,17 @@
+.lista_tallas {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.talla {
+    border: 1px solid lightgray;
+    color: gray;
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+.talla:hover {
+    background: lightgray;
+}

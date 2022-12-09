@@ -1,0 +1,21 @@
+.carousel-c .slide{
+    height: 50px;
+}
+.carousel-c .slide button{
+    margin-bottom: -20px;
+}
+.carousel .carousel-item {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.mini-height {
+    height: 40px;
+    padding-top: 10px;
+}

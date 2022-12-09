@@ -1,0 +1,16 @@
+.ordenar{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+}
+
+.ordenar p{
+    font-size: 12px;
+    text-align: center;
+    margin: 5px;
+}
+
+.ordenar select{
+    font-size: 12px;
+    padding-right: 40px;
+}

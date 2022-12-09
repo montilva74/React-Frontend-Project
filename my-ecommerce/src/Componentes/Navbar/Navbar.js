@@ -1,39 +1,102 @@
+<<<<<<< HEAD
     import React from 'react'
+=======
+import React, { useState } from 'react'
+>>>>>>> 12321fd6dfe5521706bc4ecd5d3f13799583b01e
 
-const Navbar = ({title}) => {
+import "./Navbar.css"
+import logo from "./logo.jpg";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping, faMagnifyingGlass, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+
+const Navbar = ({title, isDarkMode, setIsDarkMode}) => {
+
+    const [showSubmenu, setShowSubmenu] = useState(false)
+    const [category, setCategory] = useState(null)
+
+    const showCategory = (category) => {
+        setShowSubmenu(true)
+        setCategory(category)
+    }
 
     return (
-        <nav className="navbar navbar-dark bg-dark">
-            <a className="navbar-brand" href="/"> {title} </a>
-            <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-
-            <div className="navbar-collapse collapse" id="navbarsExample01">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="/">Link</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link disabled" href="/">Disabled</a>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="/" id="dropdown01" data-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                        <div className="dropdown-menu" aria-labelledby="dropdown01">
-                            <a className="dropdown-item" href="/">Action</a>
-                            <a className="dropdown-item" href="/">Another action</a>
-                            <a className="dropdown-item" href="/">Something else here</a>
-                        </div>
-                    </li>
-                </ul>
-                <form className="form-inline my-2 my-md-0">
-                    <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
-                </form>
+        <>
+        <div className="grayborder">
+        <div className="container container-fluid pt-3 pb-4">
+            <div className='row'>
+                <div className="menu-register d-flex justify-content-end">
+                    <button className='darkbutton' onClick={ () => setIsDarkMode( !isDarkMode )}>
+                        <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+                        { isDarkMode ? "Modo Claro" : "Modo Oscuro" } 
+                    </button>
+                    <a className="ml-1 px-2 menu_sublink" href="/register"> REGISTRO </a>
+                    <a className="mr-1 px-2 menu_sublink" href="/login"> INICIAR SESION </a>
+                </div>
             </div>
-        </nav>
+             <div className="row clearfix mt-3">
+                <div className='col-2'>
+                    <a href='/'>
+                        <img className="rounded float-start logo" src={logo}  alt="logo"/>
+                    </a>
+                </div>
+                <div className=' sub-category col-7 mt-2'>
+                    <div>
+                        <a className="menu_category" href="/categories/hombres" onMouseEnter={() => showCategory("men")}  > HOMBRES     </a>
+                        <a className="menu_category" href="/categories/mujeres"    onMouseEnter={() => showCategory("women")}> MUJERES     </a>
+                        <a className="menu_category" href="/categories/niños" onMouseEnter={() => showCategory("kids")} > NIÑOS       </a>
+                        <a className="menu_category" href="/register"> DESCUENTOS  </a>
+                    </div>
+                    { showSubmenu &&
+                        <div className="submenu" onMouseLeave={() => setShowSubmenu(false)}>
+
+                            { category === "men" &&
+                                <ul>
+                                    <li><a href="/categories/hombres/pantalones">Pantalones</a>  </li>
+                                    <li><a href="/categories/hombres/remeras">Remeras</a>    </li>
+                                    <li><a href="/categories/hombres/zapatillas">Zapatillas</a>       </li>
+                                    <li><a href="/categories/hombres/bermudas">Bermudas</a>  </li>
+                                </ul>
+                            }
+
+                            { category === "women" &&
+                                <ul>
+                                    <li><a href="/categories/mujeres/remeras">Remera</a>          </li>
+                                    <li><a href="/categories/mujeres/buzos">Buzos</a>          </li>
+                                    <li><a href="/categories/mujeres/ropa_interior">Ropa Interior</a></li>
+                                    <li><a href="/categories/mujeres/pantalones">Pantalones</a></li>
+                                </ul>
+                            }
+
+                            { category === "kids" &&
+                                <ul>
+                                    <li><a href="/categories/niños/pantalones">Pantalones</a>         </li>
+                                    <li><a href="/categories/niños/buzos">Buzos</a>          </li>
+                                    <li><a href="/categories/niños/trajes_de_baño">Trajes de Baño</a>         </li>
+                                </ul>
+                            }
+
+                        </div>
+                    }
+                </div>
+                <div className='col-3 mt-2 d-flex justify-content-end'>
+
+                    <div className="search_control">
+                        <input type="text" placeholder="¿Que estas buscando?" id="example-search-input"/>
+                        <span>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        </span>
+                    </div>
+                    <div>
+                        <a className='cart_link' href="/cart">
+                            <FontAwesomeIcon icon={faCartShopping} />
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </div>
+        </div>
+        </>
     )
 }
 
