@@ -1,5 +1,5 @@
 .grayborder {
-    border-bottom: 1px solid darkgray;
+    border-bottom: 1px solid #efefef;
 }
 .darkbutton{
     font-size: 12px;
@@ -31,9 +31,11 @@
 .menu_category{
     font-size: 14px;
     text-decoration: none;
-    color: black;
+    color: #333;
     text-transform: uppercase;
     padding-left: 10px;
+    font-weight: bold;
+    margin-right: 30px;
 }
 .menu_category:hover {
     color: darkgray;
@@ -69,20 +71,30 @@
 }
 
 .submenu {
-    margin-left: 10px;
-    padding-top: 15px;
     font-size: 12px;
     background: white;
+    position: absolute;
+    border: 1px solid #efefef;
+    border-top: none;
+    z-index: 5000;
+}
+.submenu ul {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
 }
 .submenu li {
-    display: inline;
+    display: block;
     list-style-type: none;
+    width: 200px;
 }
 .submenu a {
     margin-top: 15px;
     color: #000;
     margin-right: 20px;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
 }
 .submenu a:hover {
     color: #AAA;

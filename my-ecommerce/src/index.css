@@ -24,14 +24,14 @@ body {
 .dark_mode .search_control svg {
   color: black;
 }
-.dark_mode .sub-category .submenu {
+.dark_mode .submenu {
   background-color: rgb(9, 9, 9);
 }
-.dark_mode .sub-category ul li a{
+.dark_mode .submenu ul li a{
   background-color: rgb(9, 9, 9);
   color: white;
 }
-.dark_mode .sub-category ul li a:hover{
+.dark_mode .submenu ul li a:hover{
   color: gray;
 }
 .dark_mode .mini-height {
