@@ -58,58 +58,81 @@ Para el Footer
     <link rel="stylesheet" href="playground.css">
 
     
-    <Compra>
-        <section class="Compra_section_datosDelEnvio">
-            <fieldset class="Compra_fieldset">
-                <legend>Ingresa los datos para el envio</legend>
-                <form action="" method="post" class="Compra_form_datos">
-                    <input type="text" placeholder="Nombre">
-                <input type="text" placeholder="Apellido">
-                <input type="text" placeholder="Dirección">
-                <input type="text" placeholder="Localidad">
-                <input type="text" placeholder="Codigo Postal">
-                <input type="date" placeholder="Fecha deseable de entrega">
-                <button class="Compra_boton_datos">Guardar</button>
-            </form>
-        </fieldset>
-    </section>
-    <section class="Compra_section_datosDePago">
-        <fieldset>
-            <legend>Seleciona tu tarjeta</legend>
-            <form action="">
-                <div class="Compra_div_seleccion">
-                    <img src="" alt="visa" />
-                    <input value="visa" name="tarjetas" type="radio" />
-                </div>
-                <div class="Compra_div_seleccion">
-                    <img src="" alt="master" />
-                    <input value="master" name="tarjetas" type="radio" />
-                </div>
-                <div class="Compra_div_seleccion">
-                    <img src="" alt="amex" />
-                    <input value="amex" name="tarjetas" type="radio" />
-                </div>
-                <div class="Compra_div_seleccion">
-                    <img src="" alt="dinners" />
-                    <input value="dinners" name="tarjetas" type="radio" />
-                </div>
-                <div class="Compra_div_seleccion">
-                    <img src="" alt="cabal" />
-                    <input value="cabal" name="tarjetas" type="radio" />
-                </div>
-                <div class="Compra_div_seleccion">
-                    <img src="" alt="naranja" />
-                    <input value="naranja" name="tarjetas" type="radio" />
-                </div>
-                <div class="Compra_div_seleccion">
-                    <img src="" alt="shopping" />
-                    <input value="shopping" name="tarjetas" type="radio" />
-                </div>
-                <div class="Compra_div_seleccion">
-                    <img src="" alt="nativa" />
-                    <input value="nativa" name="tarjetas" type="radio" />
-                </div>
-                <button>Proceder a pagar</button>
-            </form>
-        </fieldset>
-    </Compra>
+<Compra>
+    <div class="Compra_div_contenedor">
+        <div class="Compra_PanelIzquierdo">
+            <div class="Compra_antes">
+                <section class="Compra_section_datosDelEnvio">
+                    <fieldset class="Compra_fieldset">
+                        <legend>Ingresa los datos para el envio</legend>
+                        <form action="" method="post" class="Compra_form_datos">
+                            <input type="text" placeholder="Nombre">
+                            <input type="text" placeholder="Apellido">
+                            <input type="text" placeholder="Dirección">
+                            <input type="text" placeholder="Localidad">
+                            <input type="text" placeholder="Codigo Postal">
+                            <input type="date" placeholder="Fecha deseable de entrega">
+                            <button class="Compra_boton_datos">Guardar</button>
+                        </form>
+                    </fieldset>
+                </section>
+                <section class="Compra_section_datosDePago">
+                    <fieldset>
+                        <legend>Seleciona tu tarjeta</legend>
+                        <form action="">
+                            <div class="Compra_div_seleccion">
+                                <img src="" alt="visa" />
+                                <input value="visa" name="tarjetas" type="radio" />
+                            </div>
+                            <div class="Compra_div_seleccion">
+                                <img src="" alt="master" />
+                                <input value="master" name="tarjetas" type="radio" />
+                            </div>
+                            <div class="Compra_div_seleccion">
+                                <img src="" alt="amex" />
+                                <input value="amex" name="tarjetas" type="radio" />
+                            </div>
+                            <div class="Compra_div_seleccion">
+                                <img src="" alt="dinners" />
+                                <input value="dinners" name="tarjetas" type="radio" />
+                            </div>
+                            <div class="Compra_div_seleccion">
+                                <img src="" alt="cabal" />
+                                <input value="cabal" name="tarjetas" type="radio" />
+                            </div>
+                            <div class="Compra_div_seleccion">
+                                <img src="" alt="naranja" />
+                                <input value="naranja" name="tarjetas" type="radio" />
+                            </div>
+                            <div class="Compra_div_seleccion">
+                                <img src="" alt="shopping" />
+                                <input value="shopping" name="tarjetas" type="radio" />
+                            </div>
+                            <div class="Compra_div_seleccion">
+                                <img src="" alt="nativa" />
+                                <input value="nativa" name="tarjetas" type="radio" />
+                            </div>
+                            <button class="Compra_btn_pago">Proceder a pagar</button>
+                        </form>
+                    </fieldset>
+                </section>
+            </div>
+            <div class="Compra_despues">
+                <fieldset>
+                    <legend>Datos de la entrega</legend>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos del pago</legend>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Compra_PanelDerecho">
+            <div class="Compra_div_instrucciones">
+                
+            </div>
+            <div class="Resumen">
+                
+            </div>
+        </div>
+    </div>
+</Compra>

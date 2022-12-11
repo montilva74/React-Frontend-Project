@@ -3,7 +3,7 @@
     width: 100vw;
     height: 150px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     background: #000;
 }
