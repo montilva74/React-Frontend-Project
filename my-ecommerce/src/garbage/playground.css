@@ -1,0 +1,38 @@
+/*
+.Compra_section_datosDePago{}
+.Compra_div_seleccion{}
+*/
+.Compra_section_datosDelEnvio{
+    width: 500px;
+}
+
+.Compra_fieldset > legend{
+    margin: 2rem 2rem 1rem 2rem;
+}
+
+.Compra_fieldset{
+    display: flex;
+    justify-content: center;
+}
+
+.Compra_form_datos{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Compra_form_datos > input{
+    margin: 0 0 1rem 0;
+    height: 40px;
+}
+
+.Compra_boton_datos{
+    height: 50px;
+}
+
+.Compra_section_datosDePago{
+}
+.Compra_section_datosDePago{
+
+}
