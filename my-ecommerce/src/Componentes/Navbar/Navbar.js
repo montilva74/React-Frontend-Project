@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-    import React from 'react'
-=======
-import React, { useState } from 'react'
->>>>>>> 12321fd6dfe5521706bc4ecd5d3f13799583b01e
-
+import React, { useState } from 'react';
 import "./Navbar.css"
 import logo from "./logo.jpg";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faMagnifyingGlass, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 

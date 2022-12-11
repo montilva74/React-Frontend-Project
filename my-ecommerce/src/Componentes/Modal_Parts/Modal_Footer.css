@@ -1,6 +1,11 @@
 .Modal_Footer__container{
     display: flex;
     flex-direction: column;
+    width: 480px;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .Modal_Footer__titulo{
@@ -12,9 +17,27 @@
 }
 
 .Modal_Footer__text{
+    margin: 1rem 2rem;   
 
 }
 
 .Modal_Footer__li{
-    
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: baseline;
+}
+
+.Modal_Footer__divInferior{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Modal_Footer__li > img{
+    background-color: red;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    align-self: center;
 }
