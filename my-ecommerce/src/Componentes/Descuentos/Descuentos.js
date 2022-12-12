@@ -56,7 +56,7 @@ export default function Descuentos() {
 
         <div>
             <TitleCategory name="Descuentos"></TitleCategory>
-            <Banner imagen={"catimages/DC_DESCUENTOS_1.jpg"}></Banner>
+            <Banner imagen={"./../../../public/catimages/DC_DESCUENTOS_1.jpg"}></Banner>
 
             <Container className='vh75'>
                 <Row className="justify-content-md-center">
