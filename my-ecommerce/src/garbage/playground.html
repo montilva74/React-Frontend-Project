@@ -56,9 +56,10 @@ Para el Footer
 </Vista
 -->
     <link rel="stylesheet" href="playground.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;800&family=Yanone+Kaffeesatz:wght@400;600&display=swap" rel="stylesheet">
 
     
-<Compra>
+<Compra class="Compra_main">
     <div class="Compra_div_contenedor">
         <div class="Compra_PanelIzquierdo">
             <div class="Compra_antes">
@@ -66,13 +67,13 @@ Para el Footer
                     <fieldset class="Compra_fieldset">
                         <legend>Ingresa los datos para el envio</legend>
                         <form action="" method="post" class="Compra_form_datos">
-                            <input type="text" placeholder="Nombre">
-                            <input type="text" placeholder="Apellido">
-                            <input type="text" placeholder="Dirección">
-                            <input type="text" placeholder="Localidad">
-                            <input type="text" placeholder="Codigo Postal">
-                            <input type="date" placeholder="Fecha deseable de entrega">
-                            <button class="Compra_boton_datos">Guardar</button>
+                            <input type="text" id="input_nombre" onclick="explanation(0)" placeholder="Nombre">
+                            <input type="text" id="input_apellido" onclick="explanation(1)" placeholder="Apellido">
+                            <input type="text" id="input_direccion" onclick="explanation(2)" placeholder="Dirección">
+                            <input type="text" id="input_localidad" onclick="explanation(3)" placeholder="Localidad">
+                            <input type="text" id="input_cp" onclick="explanation(4)" placeholder="Codigo Postal">
+                            <input type="date" id="input_entrega" onclick="explanation(5)" placeholder="Fecha deseable de entrega">
+                            <button id="btn_guardar" class="Compra_boton_datos">Guardar</button>
                         </form>
                     </fieldset>
                 </section>
@@ -80,37 +81,39 @@ Para el Footer
                     <fieldset>
                         <legend>Seleciona tu tarjeta</legend>
                         <form action="">
-                            <div class="Compra_div_seleccion">
-                                <img src="" alt="visa" />
-                                <input value="visa" name="tarjetas" type="radio" />
-                            </div>
-                            <div class="Compra_div_seleccion">
-                                <img src="" alt="master" />
-                                <input value="master" name="tarjetas" type="radio" />
-                            </div>
-                            <div class="Compra_div_seleccion">
-                                <img src="" alt="amex" />
-                                <input value="amex" name="tarjetas" type="radio" />
-                            </div>
-                            <div class="Compra_div_seleccion">
-                                <img src="" alt="dinners" />
-                                <input value="dinners" name="tarjetas" type="radio" />
-                            </div>
-                            <div class="Compra_div_seleccion">
-                                <img src="" alt="cabal" />
-                                <input value="cabal" name="tarjetas" type="radio" />
-                            </div>
-                            <div class="Compra_div_seleccion">
-                                <img src="" alt="naranja" />
-                                <input value="naranja" name="tarjetas" type="radio" />
-                            </div>
-                            <div class="Compra_div_seleccion">
-                                <img src="" alt="shopping" />
-                                <input value="shopping" name="tarjetas" type="radio" />
-                            </div>
-                            <div class="Compra_div_seleccion">
-                                <img src="" alt="nativa" />
-                                <input value="nativa" name="tarjetas" type="radio" />
+                            <div class="Compras_div_tarjetas">
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="visa" />
+                                    <input value="visa" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="master" />
+                                    <input value="master" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="amex" />
+                                    <input value="amex" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="dinners" />
+                                    <input value="dinners" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="cabal" />
+                                    <input value="cabal" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="naranja" />
+                                    <input value="naranja" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="shopping" />
+                                    <input value="shopping" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="nativa" />
+                                    <input value="nativa" name="tarjetas" type="radio" />
+                                </div>
                             </div>
                             <button class="Compra_btn_pago">Proceder a pagar</button>
                         </form>
@@ -128,11 +131,66 @@ Para el Footer
         </div>
         <div class="Compra_PanelDerecho">
             <div class="Compra_div_instrucciones">
-                
+                <p id="Compra_div_instrucciones_id"></p>
             </div>
-            <div class="Resumen">
+            <div class="Compras_div_resumen">
+                <fieldset>
+                    <legend>El contenido de tu carrito</legend>
+                    <div class="Compras_div_contenidoCarrito">
+
+                    </div>
+                </fieldset>
                 
             </div>
         </div>
     </div>
 </Compra>
+
+<script>
+    let lugar = document.getElementById('Compra_div_instrucciones_id');
+    function explanation(num){
+        let frase; 
+        switch(num) {
+            case 0:
+                frase = 'Nombre de la persona que recibe';
+                break
+            case 1:
+                frase = 'Apellido de la persona que recibe';
+                break
+            case 2:
+                frase = 'Calle y número';
+                break
+            case 3:
+                frase = 'Ciudad del receptor';
+                break
+            case 4:
+                frase = 'Codigo postal de la ciudad';
+                break
+            case 5:
+                frase = 'Fecha en que le gustaria que fuese entregado';
+                break
+        }
+        return lugar.innerText = frase;
+
+    };
+    let inputNombre = document.getElementById('input_nombre');
+    let inputApellido = document.getElementById('input_apellido');
+    let inputDireccion = document.getElementById('input_direccion');
+    let inputLocalidad = document.getElementById('input_localidad');
+    let inputCp = document.getElementById('input_cp');
+    let inputEntrega = document.getElementById('input_entrega');
+    let botonGuardar = document.getElementById('btn_guardar');
+    botonGuardar.addEventListener('click', mostrarGuardado);
+
+    // funcion de prueba
+    function mostrarGuardado (event){
+        event.preventDefault();
+        console.log(inputNombre.value);
+        console.log(inputApellido.value);
+        console.log(inputDireccion.value);
+        console.log(inputLocalidad.value);
+        console.log(inputCp.value);
+        console.log(inputEntrega.value);        
+    }
+   
+</script>

@@ -1,20 +1,24 @@
 /*
-.Compra_section_datosDePago{}
 .Compra_div_seleccion{}
 */
+
+.Compra_main{
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+}
 
 .Compra_div_contenedor{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px;
+    gap: 2vw;
 }
 
 
 
 .Compra_PanelIzquierdo{
-    width: 500px;
+    width: 70vw;
 }
 
 .Compra_fieldset > legend{
@@ -27,7 +31,7 @@
 }
 
 .Compra_form_datos{
-    width: 400px;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,12 +43,34 @@
 }
 
 .Compra_boton_datos{
-    height: 50px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+
+/* SECCION DE COMPRA*/
+
+.Compra_section_datosDePago{
+    margin-top: 2rem;
+}
+
+.Compras_div_tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Compra_div_seleccion{
+    width: 20vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
 .Compra_btn_pago{
-    width: 400px;
-    height: 40px;
+    width: 60vw;
+    height: 60px;
+    font-size: 1.5rem;
 }
 
 .Compra_antes{
@@ -69,12 +95,36 @@
 /* panel derecho */
 
 .Compra_PanelDerecho{
-    width: 500px;
-    margin-top: 43px;
+    width: 70vw;
+    margin-top: 50px;
 }
 
 .Compra_div_instrucciones{
-    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
     height: 300px;
     background-color: rgb(221, 221, 221);
+
+}
+
+.Compra_div_instrucciones > p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 10px;
+}
+
+.Compras_div_resumen{
+    width: 30vw;
+    margin-top: 2rem;
+}
+
+.Compras_div_contenidoCarrito{
+    height: 95.8vh;
 }
