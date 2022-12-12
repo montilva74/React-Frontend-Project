@@ -78,7 +78,7 @@
             "rosado"
         ],
         "image": "/assets/Musculosa Start (Ros) DC Girl.jpg",
-        "nombre": "Muculosa Start (Ros) DC Girl",
+        "nombre": "Musculosa Start (Ros) DC Girl",
         "tipo": "remeras"
     },
     {
@@ -109,7 +109,8 @@
         ],
         "image": "/assets/Medias DC Logo Woman Sock DC Mujer.jpg",
         "nombre": "Medias DC Logo Woman Sock DC Mujer",
-        "tipo": "ropa_interior"
+        "tipo": "ropa_interior",
+        "descuento": "15"
     },
     {
         "id": 10,
@@ -170,7 +171,8 @@
         ],
         "image": "/assets/jeanHombre_02.jpg",
         "nombre": "taverniti",
-        "tipo": "pantalones"
+        "tipo": "pantalones",
+        "descuento": "30"
     },
     {
         "id": 13,
@@ -374,7 +376,8 @@
         ],
         "image": "/assets/Traje de baño LANI DC Niños.jpg",
         "nombre": "Traje de baño LANI DC Niños",
-        "tipo": "trajes_de_baño"
+        "tipo": "trajes_de_baño",
+        "descuento": "50"
     },
     {
         "id": 25,
@@ -448,7 +451,8 @@
         ],
         "image": "/assets/Jogging Varsity (Neg) DC Mujer.jpg",
         "nombre": "Jogging Varsity (Neg) DC Mujer",
-        "tipo": "pantalones"
+        "tipo": "pantalones",
+        "descuento": "40"
     },
     {
         "id": 30,

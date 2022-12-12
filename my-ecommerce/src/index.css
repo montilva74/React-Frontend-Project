@@ -104,3 +104,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.user_name {
+  margin-left: 5px;
+  font-size: 12px;
+}
+.dark_mode .user_name {
+  color: white;
+}
+.vh75 {
+	height: 75vh;
+}

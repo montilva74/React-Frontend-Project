@@ -1,24 +1,16 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom'
 import Banner from '../Banner/Banner';
 import TitleCategory from '../TitleCatergory/TitleCategory';
 import ProductItem from '../ProductItem/ProductItem';
-import productos from "./../../Api/products.json";
+import productos from "../../Api/products.json";
 import Ordenar from '../Ordenar/Ordenar';
 import FiltroTallas from '../FiltroTallas/FiltroTallas';
 
 
 //Aqui se organizan los componentes relacionados con las categorias, para armar la vista categorias.
-export default function Category() {
-    const { category, tipo } = useParams();
-
-    const catImages = {
-        "hombres": "DC_HOMBRES_3.jpg",
-        "mujeres": "DC_MUJER_2.jpg",
-        "niños": "DC_NIN_OS_1.jpg"
-    }
-
+export default function Descuentos() {
+    
     // Creamos la variable de Estado que va a guardar la eleccion del usuario
     const [ordenarPor, setOrdenarPor] = useState()
 
@@ -26,14 +18,9 @@ export default function Category() {
     const [tallas, setTallas] = useState([])
 
     // Funcion para filtrar por Categoria y Tipo
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const filtroCategoriaTipo = useCallback((p) => {
-        if (!tipo) {
-            return p.category === category
-        } else {
-            return p.category === category && p.tipo === tipo
-        }
-    })
+    const filtroDescuentos = (p) => {
+        return p.descuento !== null && p.descuento !== undefined
+    }
 
     const filtroPorTalla = (p) => {
         if (filtroTalla) {
@@ -57,19 +44,19 @@ export default function Category() {
 
     useEffect(() => {
 
-        const tallasDeProductos = productos.filter(p => filtroCategoriaTipo(p)).map(item => item.sizes)
+        const tallasDeProductos = productos.filter(p => filtroDescuentos(p)).map(item => item.sizes)
         const todasLasTallas = tallasDeProductos.flat(1).sort()
         setTallas([...new Set(todasLasTallas)])
 
         return () => true
 
-    }, [filtroCategoriaTipo])
+    }, [])
 
     return (
 
         <div>
-            <TitleCategory name={category}></TitleCategory>
-            <Banner imagen={`../../catimages/${catImages[category]}`}></Banner>
+            <TitleCategory name="Descuentos"></TitleCategory>
+            <Banner imagen={`../../catimages/DC_DESCUENTOS_1.jpg`}></Banner>
 
             <Container className='vh75'>
                 <Row className="justify-content-md-center">
@@ -84,7 +71,7 @@ export default function Category() {
                             <Container>
                                 <Row>
                                     {productos
-                                        .filter(p => filtroCategoriaTipo(p))
+                                        .filter(p => filtroDescuentos(p))
                                         .filter(p => filtroPorTalla(p))
                                         .sort((a, b) => ordenarProductos(a, b))
                                         .map(item =>

@@ -7,6 +7,7 @@ import Cardsbottom from "../Cardsbottom/Cardsbottom";
 import Banner from "../Banner/Banner";
 
 const Home = () => {
+
   return (
     <>
       <MinicarouselComponent></MinicarouselComponent>

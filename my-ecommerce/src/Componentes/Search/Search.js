@@ -1,23 +1,15 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom'
-import Banner from '../Banner/Banner';
-import TitleCategory from '../TitleCatergory/TitleCategory';
 import ProductItem from '../ProductItem/ProductItem';
 import productos from "./../../Api/products.json";
 import Ordenar from '../Ordenar/Ordenar';
 import FiltroTallas from '../FiltroTallas/FiltroTallas';
 
-
 //Aqui se organizan los componentes relacionados con las categorias, para armar la vista categorias.
-export default function Category() {
-    const { category, tipo } = useParams();
+export default function Search() {
 
-    const catImages = {
-        "hombres": "DC_HOMBRES_3.jpg",
-        "mujeres": "DC_MUJER_2.jpg",
-        "niños": "DC_NIN_OS_1.jpg"
-    }
+    const { frase } = useParams();
 
     // Creamos la variable de Estado que va a guardar la eleccion del usuario
     const [ordenarPor, setOrdenarPor] = useState()
@@ -25,14 +17,11 @@ export default function Category() {
     const [filtroTalla, setFiltroTalla] = useState()
     const [tallas, setTallas] = useState([])
 
-    // Funcion para filtrar por Categoria y Tipo
+    // Funcion para filtrar por Frase
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const filtroCategoriaTipo = useCallback((p) => {
-        if (!tipo) {
-            return p.category === category
-        } else {
-            return p.category === category && p.tipo === tipo
-        }
+    const filtroBuscador = useCallback((p) => {
+        return  p.nombre.toLowerCase().indexOf( frase.toLowerCase() ) >= 0 ||
+                p.tipo.toLowerCase().indexOf( frase.toLowerCase() ) >= 0
     })
 
     const filtroPorTalla = (p) => {
@@ -57,20 +46,18 @@ export default function Category() {
 
     useEffect(() => {
 
-        const tallasDeProductos = productos.filter(p => filtroCategoriaTipo(p)).map(item => item.sizes)
+        const tallasDeProductos = productos.filter(p => filtroBuscador(p)).map(item => item.sizes)
+
         const todasLasTallas = tallasDeProductos.flat(1).sort()
         setTallas([...new Set(todasLasTallas)])
 
         return () => true
 
-    }, [filtroCategoriaTipo])
+    }, [filtroBuscador])
 
     return (
 
         <div>
-            <TitleCategory name={category}></TitleCategory>
-            <Banner imagen={`../../catimages/${catImages[category]}`}></Banner>
-
             <Container className='vh75'>
                 <Row className="justify-content-md-center">
                     <Col xs="2">
@@ -84,7 +71,7 @@ export default function Category() {
                             <Container>
                                 <Row>
                                     {productos
-                                        .filter(p => filtroCategoriaTipo(p))
+                                        .filter(p => filtroBuscador(p))
                                         .filter(p => filtroPorTalla(p))
                                         .sort((a, b) => ordenarProductos(a, b))
                                         .map(item =>
@@ -93,10 +80,24 @@ export default function Category() {
                                                     img={item.image}
                                                     name={item.nombre}
                                                     precio={item.price}
-                                                    descuento={item.descuento}
                                                 ></ProductItem>
                                             </Col>
                                         )
+                                    }
+                                </Row>
+                                <Row>
+                                    { productos
+                                        .filter(p => filtroBuscador(p))
+                                        .filter(p => filtroPorTalla(p))
+                                        .sort((a, b) => ordenarProductos(a, b)).length === 0 &&
+                                        <Col className='mt-5'>
+                                            <h5>Lo sentimos mucho, no se encontraron productos con esa palabra clave.</h5>
+                                            <ul>
+                                                <li>Revisa la ortografía de la palabra.</li>
+                                                <li>Utiliza palabras más genéricas o menos palabras.</li>
+                                                <li>Navega por las categorías para encontrar un producto similar</li>
+                                            </ul>
+                                        </Col>
                                     }
                                 </Row>
                             </Container>

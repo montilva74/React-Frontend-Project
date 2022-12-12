@@ -99,3 +99,13 @@
 .submenu a:hover {
     color: #AAA;
 }
+.logout_button {
+    color: #333;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+.search_button {
+    cursor: pointer;
+}

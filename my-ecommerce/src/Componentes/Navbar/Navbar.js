@@ -4,9 +4,12 @@ import "./Navbar.css"
 import logo from "./logo.jpg";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping, faMagnifyingGlass, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping, faMagnifyingGlass, faMoon, faRightFromBracket, faSun } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom';
 
-const Navbar = ({ title, isDarkMode, setIsDarkMode }) => {
+const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
+
+    const navigate = useNavigate()
 
     const [showSubmenu, setShowSubmenu] = useState(false)
     const [category, setCategory] = useState(null)
@@ -16,18 +19,49 @@ const Navbar = ({ title, isDarkMode, setIsDarkMode }) => {
         setCategory(category)
     }
 
+    const localUserName = localStorage.getItem("userName")
+
+    const userLogout = () => {
+        localStorage.removeItem("userName")
+        window.location.reload(false);
+    }
+
+    const [searchText, setSearchText] = useState("")
+    const searchProducts = () => {
+        navigate (`/buscador/${searchText}`)
+    }
+    const onEnterKey = (event) => {
+        if(event.key === 'Enter'){
+            searchProducts()
+        }
+    }
+
     return (
         <>
             <div className="grayborder">
                 <div className="container container-fluid pt-3 pb-4">
                     <div className='row'>
                         <div className="menu-register d-flex justify-content-end">
-                            <button className='darkbutton' onClick={() => setIsDarkMode(!isDarkMode)}>
+                            <button className='darkbutton' onClick={() => toggleDarkMode(!isDarkMode)}>
                                 <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
                                 {isDarkMode ? "Modo Claro" : "Modo Oscuro"}
                             </button>
-                            <a className="ml-1 px-2 menu_sublink" href="/register"> REGISTRO </a>
-                            <a className="mr-1 px-2 menu_sublink" href="/login"> INICIAR SESION </a>
+
+                            { !localUserName &&
+                                <>
+                                    <a className="ml-1 px-2 menu_sublink" href="/register"> REGISTRO </a>
+                                    <a className="mr-1 px-2 menu_sublink" href="/login"> INICIAR SESION </a>
+                                </>
+                            }
+                            { localUserName &&
+                                <>
+                                    <span className='user_name'> Bienvenido, {localUserName} </span>
+                                    <FontAwesomeIcon
+                                        className='logout_button'
+                                        icon={faRightFromBracket}
+                                        onClick={ () => userLogout() } />
+                                </>
+                            }
                         </div>
                     </div>
                     <div className="row clearfix mt-3">
@@ -41,15 +75,24 @@ const Navbar = ({ title, isDarkMode, setIsDarkMode }) => {
                                 <a className="menu_category" href="/categories/hombres" onMouseEnter={() => showCategory("men")}  > HOMBRES     </a>
                                 <a className="menu_category" href="/categories/mujeres" onMouseEnter={() => showCategory("women")}> MUJERES     </a>
                                 <a className="menu_category" href="/categories/niños" onMouseEnter={() => showCategory("kids")} > NIÑOS       </a>
-                                <a className="menu_category text-danger" href="/register"> DESCUENTOS  </a>
+                                <a className="menu_category text-danger" href="/descuentos"> DESCUENTOS  </a>
                             </div>
                         </div>
                         <div className='col-3 mt-2 d-flex justify-content-end'>
 
                             <div className="search_control">
-                                <input type="text" placeholder="¿Que estas buscando?" id="example-search-input" />
+                                <input
+                                    type="text"
+                                    placeholder="¿Que estas buscando?"
+                                    id="example-search-input"
+                                    onChange={ (e) => setSearchText(e.target.value)}
+                                    onKeyUp={ (e) => onEnterKey(e) }
+                                    />
                                 <span>
-                                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                                    <FontAwesomeIcon
+                                        icon={faMagnifyingGlass}
+                                        className="search_button"
+                                        onClick={ () => searchProducts() } />
                                 </span>
                             </div>
                             <div>

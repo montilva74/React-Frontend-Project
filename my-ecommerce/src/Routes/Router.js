@@ -4,6 +4,8 @@ import Login from '../Componentes/Login/Login';
 import Resetpassword from "../Componentes/Resetpassword/Resetpassword";
 import Home from "../Componentes/Home/Home";
 import Category from "../Componentes/Category/Category";
+import Search from "../Componentes/Search/Search";
+import Descuentos from "../Componentes/Descuentos/Descuentos";
 
 const Router = ( {children} ) => {
 
@@ -17,13 +19,15 @@ const Router = ( {children} ) => {
 
             <Routes>
 
-                <Route path="/"         element={<Home />} />
-                <Route path="/gallery"  element={<Vista1 />} />
-                <Route path="/login"    element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/resetpassword" element={<Resetpassword/>} />
-                <Route path="/categories/:category" element={<Category />} />
-                <Route path="/categories/:category/:tipo" element={<Category />} />
+                <Route path="/"                             element={<Home />} />
+                <Route path="/gallery"                      element={<Vista1 />} />
+                <Route path="/login"                        element={<Login />} />
+                <Route path="/register"                     element={<Register />} />
+                <Route path="/resetpassword"                element={<Resetpassword/>} />
+                <Route path="/categories/:category"         element={<Category />} />
+                <Route path="/categories/:category/:tipo"   element={<Category />} />
+                <Route path="/buscador/:frase"              element={<Search />} />
+                <Route path="/descuentos"                   element={<Descuentos />} />
             </Routes>
 
         </BrowserRouter>

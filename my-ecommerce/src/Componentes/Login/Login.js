@@ -3,7 +3,6 @@ import { useFirestore } from "reactfire";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import "./Login.css";
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 const Register = (props) => {
@@ -11,7 +10,6 @@ const Register = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [login, setLogin] = useState();
-    const navigate = useNavigate();
 
     const usersCollection = collection(useFirestore(), 'users');
 
@@ -25,7 +23,11 @@ const Register = (props) => {
         if ( result.docs && result.docs.length > 0) {
             // Existe un registro con esos datos
             const user = result.docs[0].data();
-            navigate('/')
+
+            localStorage.removeItem("user")
+            localStorage.setItem("userName", user.name + " " + user.lastname)
+
+            window.location.replace("/");
         } else {
             console.log("Usuario no Registrado")
             setLogin(false)

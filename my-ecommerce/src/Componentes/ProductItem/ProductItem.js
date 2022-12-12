@@ -2,7 +2,7 @@ import React from 'react';
 import "./ProductItem.css";
 
 //Este componente muestra el producto(imagen, nombre, precio)
-export default function ProductItem({id, img, name, precio, category}) {
+export default function ProductItem({id, img, name, precio, descuento, category}) {
 
   return (
     <a href='/producto/id' className='product_a'>
@@ -16,6 +16,9 @@ export default function ProductItem({id, img, name, precio, category}) {
             <div className='product_price'>
                 ${precio}
             </div>
+            { descuento &&
+                <div className='descuento'> {descuento} % de descuento </div>
+            }
         </div>
     </a>
   )
