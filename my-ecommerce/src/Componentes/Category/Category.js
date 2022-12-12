@@ -71,7 +71,7 @@ export default function Category() {
             <TitleCategory name={category}></TitleCategory>
             <Banner imagen={`../../catimages/${catImages[category]}`}></Banner>
 
-            <Container className='vh75'>
+            <Container>
                 <Row className="justify-content-md-center">
                     <Col xs="2">
                         <FiltroTallas tallas={tallas} setFiltroTalla={setFiltroTalla}></FiltroTallas>

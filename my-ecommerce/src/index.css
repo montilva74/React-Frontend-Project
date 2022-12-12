@@ -8,7 +8,7 @@ body {
 }
 
 .dark_mode {
-  background: rgb(9, 9, 9);
+  background: rgb(30, 29, 29);
 }
 .dark_mode .menu-register a:hover{
   color: gray;
@@ -25,10 +25,10 @@ body {
   color: black;
 }
 .dark_mode .submenu {
-  background-color: rgb(9, 9, 9);
+  background-color: rgb(30, 29, 29);
 }
 .dark_mode .submenu ul li a{
-  background-color: rgb(9, 9, 9);
+  background-color: rgb(30, 29, 29);
   color: white;
 }
 .dark_mode .submenu ul li a:hover{
@@ -113,4 +113,7 @@ code {
 }
 .vh75 {
 	height: 75vh;
+}
+.dark_mode .logout_button {
+  color: white;
 }
