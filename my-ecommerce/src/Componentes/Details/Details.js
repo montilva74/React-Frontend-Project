@@ -5,9 +5,11 @@ import { ModalDetails } from './Componentes/Modal_Parts/Modal_details';
 
 export default function Details() {
   return (
-    <button styles>Comprar</button>
-    <Modal>
-        <ModalDetails/>
-    </Modal>
+    <div>
+        <button styles>Comprar</button>
+        <Modal>
+            <ModalDetails/>
+        </Modal>
+    </div>
   )
 }
