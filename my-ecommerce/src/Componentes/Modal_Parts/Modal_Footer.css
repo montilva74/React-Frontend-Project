@@ -1,23 +1,24 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .Modal_Footer__container{
     display: flex;
     flex-direction: column;
-    width: 480px;
+    width: 520px;
     justify-content: center;
     align-items: center;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    z-index:100;
 }
 
-.Modal_Footer__titulo{
 
-}
-
-.Modal_Footer__ul{
-
-}
 
 .Modal_Footer__text{
-    margin: 1rem 2rem;   
+    margin: 1rem 2rem;
+    font-size: 1.75rem;
+    font-weight: 600;
 
 }
 
@@ -30,8 +31,9 @@
 
 .Modal_Footer__divInferior{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .Modal_Footer__li > img{
@@ -39,6 +41,18 @@
     width: 50px;
     border-radius: 50%;
     align-self: center;
+}
+
+.Modal_Footer__divInferior_a {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    height: 50px;
+    width: 50px;
+}
+
+.Modal_Footer__icon{
+    margin: 0 1.5rem;
 }
 
 .Modal_img__alba{
@@ -53,3 +67,9 @@
     background-image: url('../../Imagenes/thumb_ary.png');
     background-repeat: no-repeat;
 }
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
