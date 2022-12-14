@@ -41,19 +41,7 @@ Para el Footer
     <p  className="Modal_Footer__li">Github del proyecto</p><img src="" alt="gihub"> 
 </div>
 
-<Vista>
-    <div class="imagen">
-        
-    </div>
-    <div class="detalle">
-        <h1 class="nombre"></h1>
-        <p class="descripcion"></p>
-        <option value=""></option>
-        <p class="">Precio:</p>
-        <p ></p>
-        
-    </div>
-</Vista
+
 -->
     <link rel="stylesheet" href="playground.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;800&family=Yanone+Kaffeesatz:wght@400;600&display=swap" rel="stylesheet">
@@ -64,24 +52,34 @@ Para el Footer
         <div class="Compra_PanelIzquierdo">
             <div class="Compra_antes">
                 <section class="Compra_section_datosDelEnvio">
+                    <h5 class="Compras_h3_titulos">Ingresa los datos para el envio</h5>
                     <fieldset class="Compra_fieldset">
-                        <legend>Ingresa los datos para el envio</legend>
                         <form action="" method="post" class="Compra_form_datos">
-                            <input type="text" id="input_nombre" onclick="explanation(0)" placeholder="Nombre">
-                            <input type="text" id="input_apellido" onclick="explanation(1)" placeholder="Apellido">
-                            <input type="text" id="input_direccion" onclick="explanation(2)" placeholder="Dirección">
-                            <input type="text" id="input_localidad" onclick="explanation(3)" placeholder="Localidad">
-                            <input type="text" id="input_cp" onclick="explanation(4)" placeholder="Codigo Postal">
-                            <input type="date" id="input_entrega" onclick="explanation(5)" placeholder="Fecha deseable de entrega">
+                            <p class="Compra_p_textos">Nombre  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_nombre" onclick="explanation(0)">
+                            <p class="Compra_p_textos">Apellido  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_apellido" onclick="explanation(1)">
+                            <p class="Compra_p_textos">Dirección  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_direccion" onclick="explanation(2)">
+                            <p class="Compra_p_textos">Localidad  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_localidad" onclick="explanation(3)">
+                            <p class="Compra_p_textos">Codigo Postal  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_cp" onclick="explanation(4)">
+                            <p class="Compra_p_textos">Fecha deseable de entrega  <span class="Requerido">*</span></p>
+                            <input type="date" id="input_entrega" onclick="explanation(5)">
                             <button id="btn_guardar" class="Compra_boton_datos">Guardar</button>
                         </form>
                     </fieldset>
                 </section>
                 <section class="Compra_section_datosDePago">
+                    <h5 class="Compras_h3_titulos">Seleciona tu tarjeta</h5>
                     <fieldset>
-                        <legend>Seleciona tu tarjeta</legend>
-                        <form action="">
+                        <form action="" method="post">
                             <div class="Compras_div_tarjetas">
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="mercadopago" />
+                                    <input value="mercadopago" name="tarjetas" type="radio" />
+                                </div>
                                 <div class="Compra_div_seleccion">
                                     <img src="" alt="visa" />
                                     <input value="visa" name="tarjetas" type="radio" />
@@ -121,11 +119,13 @@ Para el Footer
                 </section>
             </div>
             <div class="Compra_despues">
+                <h5 class="Compras_h3_titulos">Datos de la entrega</h5>
                 <fieldset>
-                    <legend>Datos de la entrega</legend>
+                    <p class="Compras_node"></p>
                 </fieldset>
+                <h5 class="Compras_h3_titulos">Datos del pago</h5>
                 <fieldset>
-                    <legend>Datos del pago</legend>
+                    <p class="Compras_node"></p>
                 </fieldset>
             </div>
         </div>
@@ -134,17 +134,15 @@ Para el Footer
                 <p id="Compra_div_instrucciones_id"></p>
             </div>
             <div class="Compras_div_resumen">
+                <h5 class="Compras_h3_titulos">El contenido de tu carrito</h5>
                 <fieldset>
-                    <legend>El contenido de tu carrito</legend>
-                    <div class="Compras_div_contenidoCarrito">
-
-                    </div>
+                    <div class="Compras_div_contenidoCarrito"></div>
                 </fieldset>
-                
             </div>
         </div>
     </div>
 </Compra>
+
 
 <script>
     let lugar = document.getElementById('Compra_div_instrucciones_id');
@@ -152,27 +150,50 @@ Para el Footer
         let frase; 
         switch(num) {
             case 0:
-                frase = 'Nombre de la persona que recibe';
+                frase = '"Nombre de la persona que recibe"';
                 break
             case 1:
-                frase = 'Apellido de la persona que recibe';
+                frase = '"Apellido de la persona que recibe"';
                 break
             case 2:
-                frase = 'Calle y número';
+                frase = '"Calle y número"';
                 break
             case 3:
-                frase = 'Ciudad del receptor';
+                frase = '"Ciudad del receptor"';
                 break
             case 4:
-                frase = 'Codigo postal de la ciudad';
+                frase = '"Codigo postal de la ciudad"';
                 break
-            case 5:
-                frase = 'Fecha en que le gustaria que fuese entregado';
-                break
-        }
-        return lugar.innerText = frase;
+                case 5:
+                    frase = '"Fecha en que le gustaria que fuese entregado"';
+                    break
+                }
+                return lugar.innerText = frase;
+                
+    };
+    
+    // funcion de prueba
+    function mostrarGuardado (event){
+        event.preventDefault();
+        let textoComprobacion = "";
+        inputNombre2 = inputNombre.value;
+        inputApellido2 = inputApellido.value;
+        inputDireccion2 = inputDireccion.value;
+        inputLocalidad2 = inputLocalidad.value;
+        inputCp2 = inputCp.value;
+        inputEntrega2 = inputEntrega.value;
+
+        textoComprobacion = `Tu compra sera entregada a ${inputNombre2} ${inputApellido2} el dia ${inputEntrega2} en la calle ${inputDireccion2} de la localidad de codigo postal: ${inputCp2}.` 
+        return console.log(textoComprobacion)
+    }
+
+    function pagarYseguir (event) {
+        event.preventDefault();
+        antes.setAttribute('class',Comprar_ocultar);
+        despues.removeAttibute('class',Comprar_ocultar)
 
     };
+
     let inputNombre = document.getElementById('input_nombre');
     let inputApellido = document.getElementById('input_apellido');
     let inputDireccion = document.getElementById('input_direccion');
@@ -182,15 +203,7 @@ Para el Footer
     let botonGuardar = document.getElementById('btn_guardar');
     botonGuardar.addEventListener('click', mostrarGuardado);
 
-    // funcion de prueba
-    function mostrarGuardado (event){
-        event.preventDefault();
-        console.log(inputNombre.value);
-        console.log(inputApellido.value);
-        console.log(inputDireccion.value);
-        console.log(inputLocalidad.value);
-        console.log(inputCp.value);
-        console.log(inputEntrega.value);        
-    }
-   
+    let antes = document.getElementsByClassName('Compras_antes');
+    let despues = document.getElementsByClassName('Comprar_despues');
+      
 </script>

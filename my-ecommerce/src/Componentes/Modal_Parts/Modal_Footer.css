@@ -35,9 +35,21 @@
 }
 
 .Modal_Footer__li > img{
-    background-color: red;
-    border-radius: 50%;
     height: 50px;
     width: 50px;
+    border-radius: 50%;
     align-self: center;
+}
+
+.Modal_img__alba{
+    background-image: url('../../Imagenes/thumb_alba.png');
+    background-repeat: no-repeat;
+}
+.Modal_img__marce{
+    background-image: url('../../Imagenes/thumb_marce.png');
+    background-repeat: no-repeat;
+}
+.Modal_img__ary{
+    background-image: url('../../Imagenes/thumb_ary.png');
+    background-repeat: no-repeat;
 }
