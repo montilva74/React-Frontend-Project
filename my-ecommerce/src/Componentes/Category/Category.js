@@ -7,6 +7,7 @@ import ProductItem from '../ProductItem/ProductItem';
 import productos from "./../../Api/products.json";
 import Ordenar from '../Ordenar/Ordenar';
 import FiltroTallas from '../FiltroTallas/FiltroTallas';
+import Detail from '..Details/Details.js'
 
 
 //Aqui se organizan los componentes relacionados con las categorias, para armar la vista categorias.

@@ -6,7 +6,6 @@ import { getFirestore } from 'firebase/firestore';
 import { FirestoreProvider, useFirebaseApp } from "reactfire";
 import { useState } from 'react';
 import Footer from './Componentes/Footer/Footer';
-import ModalFooter from "./Componentes/Modal_Parts/Modal_Footer";
 
 function App() {
 
