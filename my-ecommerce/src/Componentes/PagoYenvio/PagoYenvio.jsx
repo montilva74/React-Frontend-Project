@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { ReactDOM } from 'react';
 import './PagoYenvio.css'
 
 let lugar = document.getElementById('Compra_div_instrucciones_id');
-function explanation(num){
+function explanation (num){
     let frase; 
     switch(num) {
         case 0:
@@ -22,9 +21,11 @@ function explanation(num){
             frase = '"Codigo postal de la ciudad"';
             break
             case 5:
-                frase = '"Fecha en que le gustaria que fuese entregado"';
-                break
-            }
+            frase = '"Fecha en que le gustaria que fuese entregado"';
+            break
+            default: 
+            frase = "tranqui"
+        }
             return lugar.innerText = frase;
             
 };
@@ -33,12 +34,12 @@ function explanation(num){
 function mostrarGuardado (event){
     event.preventDefault();
     let textoComprobacion = "";
-    inputNombre2 = inputNombre.value;
-    inputApellido2 = inputApellido.value;
-    inputDireccion2 = inputDireccion.value;
-    inputLocalidad2 = inputLocalidad.value;
-    inputCp2 = inputCp.value;
-    inputEntrega2 = inputEntrega.value;
+    let inputNombre2 = inputNombre.value;
+    let inputApellido2 = inputApellido.value;
+    let inputDireccion2 = inputDireccion.value;
+    let inputLocalidad2 = inputLocalidad.value;
+    let inputCp2 = inputCp.value;
+    let inputEntrega2 = inputEntrega.value;
 
     textoComprobacion = `Tu compra sera entregada a ${inputNombre2} ${inputApellido2} el dia ${inputEntrega2} en la calle ${inputDireccion2} de la localidad de codigo postal: ${inputCp2}.` 
     return console.log(textoComprobacion)
@@ -46,8 +47,8 @@ function mostrarGuardado (event){
 
 function pagarYseguir (event) {
     event.preventDefault();
-    antes.setAttribute('class',Comprar_ocultar);
-    despues.removeAttibute('class',Comprar_ocultar)
+    antes.setAttribute('class','Comprar_ocultar');
+    despues.removeAttibute('class','Comprar_ocultar')
 
 };
 
@@ -65,10 +66,10 @@ let despues = document.getElementsByClassName('Comprar_despues');
 
 
 export default class Compra extends Component {
-  render() 
-    return (
+    render(){
+    return(
         
-        <compra className="Compra_main">
+        <Compra>
             <div className="Compra_div_contenedor">
                 <div className="Compra_PanelIzquierdo">
                     <div className="Compra_antes">
@@ -77,17 +78,17 @@ export default class Compra extends Component {
                         <fieldset className="Compra_fieldset">
                             <form action="" method="post" className="Compra_form_datos">
                                 <p className="Compra_p_textos">Nombre  <span className="Requerido">*</span></p>
-                                <input type="text" id="input_nombre" onclick="explanation(0)">
+                                <input type="text" id="input_nombre" onclick={explanation(0)} />
                                 <p className="Compra_p_textos">Apellido  <span className="Requerido">*</span></p>
-                                <input type="text" id="input_apellido" onclick="explanation(1)">
+                                <input type="text" id="input_apellido" onclick={explanation(1)} />
                                 <p className="Compra_p_textos">Dirección  <span className="Requerido">*</span></p>
-                                <input type="text" id="input_direccion" onclick="explanation(2)">
+                                <input type="text" id="input_direccion" onclick={explanation(2)} />
                                 <p className="Compra_p_textos">Localidad  <span className="Requerido">*</span></p>
-                                <input type="text" id="input_localidad" onclick="explanation(3)">
+                                <input type="text" id="input_localidad" onclick={explanation(3)} />
                                 <p className="Compra_p_textos">Codigo Postal  <span className="Requerido">*</span></p>
-                                <input type="text" id="input_cp" onclick="explanation(4)">
+                                <input type="text" id="input_cp" onclick={explanation(4)} />
                                 <p className="Compra_p_textos">Fecha deseable de entrega  <span className="Requerido">*</span></p>
-                                <input type="date" id="input_entrega" onclick="explanation(5)">
+                                <input type="date" id="input_entrega" onclick={explanation(5)} />
                                 <button id="btn_guardar" className="Compra_boton_datos">Guardar</button>
                             </form>
                         </fieldset>
@@ -149,20 +150,21 @@ export default class Compra extends Component {
                         <p className="Compras_node"></p>
                     </fieldset>
                 </div>
-            </div>
-            <div className="Compra_PanelDerecho">
-                <div className="Compra_div_instrucciones">
-                    <p id="Compra_div_instrucciones_id"></p>
                 </div>
-                <div className="Compras_div_resumen">
-                    <h5 className="Compras_h3_titulos">El contenido de tu carrito</h5>
-                    <fieldset>
-                        <div className="Compras_div_contenidoCarrito"></div>
-                    </fieldset>
+                <div className="Compra_PanelDerecho">
+                    <div className="Compra_div_instrucciones">
+                        <p id="Compra_div_instrucciones_id"></p>
+                    </div>
+                    <div className="Compras_div_resumen">
+                        <h5 className="Compras_h3_titulos">El contenido de tu carrito</h5>
+                        <fieldset>
+                            <div className="Compras_div_contenidoCarrito"></div>
+                        </fieldset>
+                    </div>
                 </div>
             </div>
-        </div>
-    </compra>
-    
-    );
+        </Compra>   
+        
+    )
+}
 }
