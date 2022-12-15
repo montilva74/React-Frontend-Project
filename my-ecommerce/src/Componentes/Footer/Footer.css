@@ -1,11 +1,46 @@
 
+
+.Footer_div_main{
+    display: flex;
+    flex-direction: column;
+    gap: 2;
+    background: #000;
+}
+.Footer_div_superior{
+    
+}
+
+.Footer_section_1{
+
+}
+
+.Footer_section_2{
+
+}
+
+.Footer_section_3{
+
+}
+
+
+.Footer_div_newsletter{
+
+}
+
+.Footer_input{
+
+}
+
+.Footer_button{
+
+}
+
 .Footer__box{
     width: 100vw;
     height: 150px;
     display: flex;
     align-items: baseline;
     justify-content: center;
-    background: #000;
 }
 .Paragraph{
     font-size: small;

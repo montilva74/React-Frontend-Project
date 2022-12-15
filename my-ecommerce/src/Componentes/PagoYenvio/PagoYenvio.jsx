@@ -30,7 +30,7 @@ function explanation (num){
             
 };
 
-// funcion de prueba
+// funcion que devuelve un texto con la info suministrada por el usuario 
 function mostrarGuardado (event){
     event.preventDefault();
     let textoComprobacion = "";
