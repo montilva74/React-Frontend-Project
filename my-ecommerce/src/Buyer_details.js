@@ -1,2 +1,2 @@
-// aqui se escribiran momenteamente los datos para de la compra del usuario.
+// aqui se escribiran momenteamente los datos de la compra del usuario.
 

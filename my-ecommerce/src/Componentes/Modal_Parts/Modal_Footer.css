@@ -1,6 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
 
 .Modal_Footer__container{
     display: flex;
@@ -8,18 +5,13 @@ html {
     width: 520px;
     justify-content: center;
     align-items: center;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
     z-index:100;
 }
-
-
 
 .Modal_Footer__text{
     margin: 1rem 2rem;
     font-size: 1.75rem;
     font-weight: 600;
-
 }
 
 .Modal_Footer__li{
@@ -41,6 +33,7 @@ html {
     width: 50px;
     border-radius: 50%;
     align-self: center;
+    background-color: rgb(201, 200, 200);
 }
 
 .Modal_Footer__divInferior_a {
