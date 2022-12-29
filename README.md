@@ -4,7 +4,7 @@ Este es un proyecto de ecommerce creado como clon de la página web de DC Shoes.
 
 # Para instalar y ejecutar el proyecto, sigue estos pasos:
 
-- Clona este repositorio en tu computadora con git clone git@github.com:montilva74/React-Frontend-Project.git
+- Clona este repositorio en tu computadora con git clone https://github.com/montilva74/React-Frontend-Project.git
 - Accede a la carpeta del proyecto con cd  React-Frontend-Project/my-ecommerce
 - Instala las dependencias con npm install o yarn install
 - Inicia el servidor de desarrollo con npm start o yarn start
