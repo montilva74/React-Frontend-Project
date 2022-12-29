@@ -58,7 +58,7 @@ export default function Search() {
     return (
 
         <div>
-            <Container className='vh75'>
+            <Container className='mt-4'>
                 <Row className="justify-content-md-center">
                     <Col xs="2">
                         <FiltroTallas tallas={tallas} setFiltroTalla={setFiltroTalla}></FiltroTallas>

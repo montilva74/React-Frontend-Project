@@ -88,26 +88,25 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
                         </div>
                         <div className='col-3 mt-2 d-flex justify-content-end'>
 
-                            <div className="search_control">
-                                <input
-                                    type="text"
-                                    placeholder="¿Que estas buscando?"
-                                    id="example-search-input"
-                                    onChange={(e) => setSearchText(e.target.value)}
-                                    onKeyUp={(e) => onEnterKey(e)}
-                                />
-                                <span>
-                                    <FontAwesomeIcon
-                                        icon={faMagnifyingGlass}
-                                        className="search_button"
-                                        onClick={() => searchProducts()} />
-                                </span>
-                            </div>
-                            <div>
-                                <a className='cart_link' href="/cart">
-                                    <FontAwesomeIcon icon={faCartShopping} />
-                                </a>
-                            </div>
+                        <div className="search_control">
+                            <input
+                                type="text"
+                                placeholder="¿Que estas buscando?"
+                                id="example-search-input"
+                                onChange={ (e) => setSearchText(e.target.value)}
+                                onKeyUp={ (e) => onEnterKey(e) } />
+                            <span>
+                                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            </span>
+                        </div>
+                        <div>
+                            <a className='cart_link' href="/cart">
+                                <FontAwesomeIcon icon={faCartShopping} />
+                                {cartNumber > 0 &&
+                                    <span className='cart_number'> {cartNumber} </span>
+                                }
+                            </a>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -144,20 +143,7 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
 
                             </div>
                         }
-                        <div className="search_control">
-                            <input type="text" placeholder="¿Que estas buscando?" id="example-search-input" />
-                            <span>
-                                <FontAwesomeIcon icon={faMagnifyingGlass} />
-                            </span>
-                        </div>
-                        <div>
-                            <a className='cart_link' href="/cart">
-                                <FontAwesomeIcon icon={faCartShopping} />
-                                {cartNumber > 0 &&
-                                    <span className='cart_number'> {cartNumber} </span>
-                                }
-                            </a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
