@@ -63,9 +63,23 @@
     margin: 5px 10px;
     color: black;
     font-size: 18px;
+    text-decoration: none;
 }
 .cart_link:hover {
     color: darkgray;
+}
+
+.cart_number {
+    font-size: 10px;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    border-radius: 100%;
+    padding: 3px 5px 3px 3px;
+    text-decoration: none;
+    bottom: 10px;
+    position: relative;
+    left: -10px;
 }
 
 .submenu {

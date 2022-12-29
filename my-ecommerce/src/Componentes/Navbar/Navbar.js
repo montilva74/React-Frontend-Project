@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import "./Navbar.css"
 import logo from "./logo.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,8 +6,18 @@ import { faCartShopping, faMagnifyingGlass, faMoon, faSun } from '@fortawesome/f
 
 const Navbar = ({title, isDarkMode, setIsDarkMode}) => {
 
+    const cart = JSON.parse( localStorage.getItem("cart") )
+    const prodCount = localStorage.getItem("cartNumber")
+
     const [showSubmenu, setShowSubmenu] = useState(false)
     const [category, setCategory] = useState(null)
+    const [cartNumber, setCartNumber] = useState(prodCount)
+
+    useEffect(() => {
+        setCartNumber( localStorage.getItem("cartNumber") )
+        return () => {}
+    }, [])
+
 
     const showCategory = (category) => {
         setShowSubmenu(true)
@@ -84,6 +94,9 @@ const Navbar = ({title, isDarkMode, setIsDarkMode}) => {
                     <div>
                         <a className='cart_link' href="/cart">
                             <FontAwesomeIcon icon={faCartShopping} />
+                            { cartNumber > 0 &&
+                                <span className='cart_number'> {cartNumber} </span>
+                            }
                         </a>
                     </div>
                 </div>
