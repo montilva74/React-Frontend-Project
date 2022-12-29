@@ -60,5 +60,5 @@ const styles = {
     top: 0,
     left: 0,
     zIndex:1,
-}
+
 }

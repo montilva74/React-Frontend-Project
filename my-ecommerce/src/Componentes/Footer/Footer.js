@@ -17,15 +17,14 @@ import logo_inst from "../../Imagenes/instalogo.png";
 import logo_twitter from "../../Imagenes/twitterlogo.png";
 import logo_yt from "../../Imagenes/Youtube-Logo.png";
 
-
 const Footer = () => 
 {
     const [active, setActive] = useState(false);
 
-            const toggle = () => {
-              setActive(!active);
-              
-  }     
+    const toggle = () => {
+        setActive(!active);
+    }
+   
     return(
         <>
             <div className="Footer_div_main">
