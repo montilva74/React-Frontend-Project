@@ -30,19 +30,19 @@ const Footer = () =>
             <div className="Footer_div_main">
                 <div className="Footer_div_superior">
                     <section className="Footer_section_1">
-                        <h2>Suscribite</h2>
+                        <h5>Suscribite</h5>
                         <div className="Footer_div_newsletter">
                             <input id="Footer_input" type="mail"/>
                             <button className="Footer_button" >Suscribite</button>
                         </div>
-                        <h2>Seguinos</h2>
+                        <h5 className="follow_us">Seguinos</h5>
                         <img alt="redes sociales" src={logo_face} className="logo_soc" />
                         <img alt="redes sociales" src={logo_inst} className="logo_soc" />
                         <img alt="redes sociales" src={logo_twitter} className="logo_soc" />
                         <img alt="redes sociales" src={logo_yt} className="logo_soc"/>
                     </section>
                     <section className="Footer_section_2">
-                        <h2>De nosotros</h2>
+                        <h5>De nosotros</h5>
                         <p>Tiendas</p>
                         <p>F&Q</p>
                         <p>Envios y retiros</p>
@@ -52,7 +52,7 @@ const Footer = () =>
                         <p>Para reclamos dirigirse aqui</p>
                     </section>
                     <section className="Footer_section_3">
-                        <h2>Menu</h2>
+                        <h5>Menu</h5>
                         <p>Hombres</p>
                         <p>Mujer</p>
                         <p>Niños</p>

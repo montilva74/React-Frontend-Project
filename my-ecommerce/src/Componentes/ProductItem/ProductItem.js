@@ -5,7 +5,7 @@ import "./ProductItem.css";
 export default function ProductItem({id, img, name, precio, category}) {
 
   return (
-    <a href='/producto/id' className='product_a'>
+    <a href={`/producto/${id}`} className='product_a'>
         <div className='product'>
             <div className="product_image">
                 <img src={img} alt="producto"/>

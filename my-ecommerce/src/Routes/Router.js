@@ -11,7 +11,7 @@ const Router = ( {children} ) => {
     const Vista1 = () => <h1>Galeria de Imagenes de Mi Emprendimiento</h1>;
 
     return (
-        <>
+        <div className="mb-5">
         <BrowserRouter>
 
             { children }
@@ -30,7 +30,7 @@ const Router = ( {children} ) => {
             </Routes>
 
         </BrowserRouter>
-        </>
+        </div>
     );
 };
 

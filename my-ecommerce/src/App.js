@@ -19,8 +19,8 @@ function App() {
         <Router>
           <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}></Navbar>
         </Router>
+        <Footer />
       </FirestoreProvider>
-      <Footer />
     </div>
   );
 }
