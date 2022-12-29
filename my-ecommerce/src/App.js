@@ -5,7 +5,7 @@ import Navbar from './Componentes/Navbar/Navbar'
 import { getFirestore } from 'firebase/firestore';
 import { FirestoreProvider, useFirebaseApp } from "reactfire";
 import { useState } from 'react';
-
+import Footer from './Componentes/Footer/Footer';
 
 function App() {
 
@@ -31,6 +31,7 @@ function App() {
         <Router>
           <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}></Navbar>
         </Router>
+        <Footer />
       </FirestoreProvider>
     </div>
   );

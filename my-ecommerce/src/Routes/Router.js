@@ -7,13 +7,15 @@ import Category from "../Componentes/Category/Category";
 import Search from "../Componentes/Search/Search";
 import Descuentos from "../Componentes/Descuentos/Descuentos";
 import DetalleProducto from "../Componentes/DetalleProducto/DetalleProducto";
+import Carrito from "../Componentes/Carrito/Carrito";
+// import ModalDetails from "../Componentes/Modal_Parts/Modal_details"
 
 const Router = ( {children} ) => {
 
     const Vista1 = () => <h1>Galeria de Imagenes de Mi Emprendimiento</h1>;
 
     return (
-        <>
+        <div className="mb-5">
         <BrowserRouter>
 
             { children }
@@ -30,10 +32,12 @@ const Router = ( {children} ) => {
                 <Route path="/buscador/:frase"              element={<Search />} />
                 <Route path="/descuentos"                   element={<Descuentos />} />
                 <Route path="/producto/:idProducto"         element={<DetalleProducto />} />
+                <Route path="/cart"                         element={<Carrito />} />
+
             </Routes>
 
         </BrowserRouter>
-        </>
+        </div>
     );
 };
 

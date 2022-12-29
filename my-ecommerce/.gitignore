@@ -214,3 +214,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/react,node,windows,macos
+
+# Archivos de uso personal de ariel
+ariel.md

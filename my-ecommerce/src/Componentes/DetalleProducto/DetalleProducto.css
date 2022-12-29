@@ -45,3 +45,7 @@
     text-transform: uppercase;
     border-radius: 2px;
 }
+
+.dark_mode .detalle-producto * {
+    color: white
+}

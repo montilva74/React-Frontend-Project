@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
-
+import React, { useState, useEffect } from 'react';
 import "./Navbar.css"
 import logo from "./logo.jpg";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faMagnifyingGlass, faMoon, faRightFromBracket, faSun } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom';
@@ -11,8 +9,18 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
 
     const navigate = useNavigate()
 
+    const cart = JSON.parse(localStorage.getItem("cart"))
+    const prodCount = localStorage.getItem("cartNumber")
+
     const [showSubmenu, setShowSubmenu] = useState(false)
     const [category, setCategory] = useState(null)
+    const [cartNumber, setCartNumber] = useState(prodCount)
+
+    useEffect(() => {
+        setCartNumber(localStorage.getItem("cartNumber"))
+        return () => { }
+    }, [])
+
 
     const showCategory = (category) => {
         setShowSubmenu(true)
@@ -28,10 +36,10 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
 
     const [searchText, setSearchText] = useState("")
     const searchProducts = () => {
-        navigate (`/buscador/${searchText}`)
+        navigate(`/buscador/${searchText}`)
     }
     const onEnterKey = (event) => {
-        if(event.key === 'Enter'){
+        if (event.key === 'Enter') {
             searchProducts()
         }
     }
@@ -47,19 +55,19 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
                                 {isDarkMode ? "Modo Claro" : "Modo Oscuro"}
                             </button>
 
-                            { !localUserName &&
+                            {!localUserName &&
                                 <>
                                     <a className="ml-1 px-2 menu_sublink" href="/register"> REGISTRO </a>
                                     <a className="mr-1 px-2 menu_sublink" href="/login"> INICIAR SESION </a>
                                 </>
                             }
-                            { localUserName &&
+                            {localUserName &&
                                 <>
                                     <span className='user_name'> Bienvenido, {localUserName} </span>
                                     <FontAwesomeIcon
                                         className='logout_button'
                                         icon={faRightFromBracket}
-                                        onClick={ () => userLogout() } />
+                                        onClick={() => userLogout()} />
                                 </>
                             }
                         </div>
@@ -85,14 +93,14 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
                                     type="text"
                                     placeholder="¿Que estas buscando?"
                                     id="example-search-input"
-                                    onChange={ (e) => setSearchText(e.target.value)}
-                                    onKeyUp={ (e) => onEnterKey(e) }
-                                    />
+                                    onChange={(e) => setSearchText(e.target.value)}
+                                    onKeyUp={(e) => onEnterKey(e)}
+                                />
                                 <span>
                                     <FontAwesomeIcon
                                         icon={faMagnifyingGlass}
                                         className="search_button"
-                                        onClick={ () => searchProducts() } />
+                                        onClick={() => searchProducts()} />
                                 </span>
                             </div>
                             <div>
@@ -136,6 +144,20 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
 
                             </div>
                         }
+                        <div className="search_control">
+                            <input type="text" placeholder="¿Que estas buscando?" id="example-search-input" />
+                            <span>
+                                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            </span>
+                        </div>
+                        <div>
+                            <a className='cart_link' href="/cart">
+                                <FontAwesomeIcon icon={faCartShopping} />
+                                {cartNumber > 0 &&
+                                    <span className='cart_number'> {cartNumber} </span>
+                                }
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,138 @@
+.Footer_div_main h2{
+    font-weight: 700;
+}
+
+.Footer_div_main{
+    display: flex;
+    flex-direction: column;
+    gap: 2;
+    background: #000;
+}
+.Footer_div_superior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem;
+    flex-wrap: wrap;
+}
+
+/* estilos de la primera secciones*/
+.Footer_section_1{
+    color: #fff;
+    padding: 1rem 0;
+    width: 25vw;
+    margin-left: 12vw;
+}
+
+/* estilos de la segunda secciones*/
+.Footer_section_2{
+    color: #fff;
+    width: 25vw;
+}
+
+/* efectos sobre las secciones*/
+
+.follow_us {
+    margin: 10px 0px;
+}
+
+.Footer_section_1 img:hover{
+    color: #fff;
+    text-decoration: underline #fff; 
+    cursor: pointer;
+    /*margin: 1rem 1rem;*/
+}
+.Footer_section_1 img:active{
+        color: #7e7d7d;
+
+}
+
+.Footer_section_2 {
+    font-size: 12px;
+}
+
+.Footer_section_2 p:hover {
+    color: #fff;
+    text-decoration: underline #fff; 
+    cursor: pointer;
+}
+
+.Footer_section_2 p:active {
+    color: rgb(126, 125, 125);
+}
+
+/* estilos de la tercera secciones*/
+.Footer_section_3{
+    color: #fff;
+    width: 25vw;
+    font-size: 12px;
+
+}
+
+.Footer_section_3 p:hover{
+    color: #fff;
+    text-decoration: underline #fff; 
+    cursor: pointer;
+}
+.Footer_section_3 p:active{
+        color: rgb(126, 125, 125);
+}
+
+.Footer_section_1 h2:nth-of-type(2){
+    margin: 1rem 0;
+}
+
+.logo_soc{
+    height: 28px;
+    margin-right: 5px;
+}
+
+
+.Footer_div_newsletter{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Footer_input{
+    background-color: transparent;
+    color: #fff;
+}
+
+.Footer_button{
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+.Footer__tarjetas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Footer__tarjetas img{
+    margin: 0.75rem;
+}
+
+.Footer__box{
+    height: 100px;;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background-color: rgb(24, 24, 24);
+}
+.Paragraph{
+    font-size: small;
+    font-weight: 800;
+    color: aliceblue;
+    margin-right: 1px;
+    margin-top: 2%; 
+}
+
+.Team8Img{
+    width: 70px;
+}
+
+.Footer_Modal__btn{
+    background-color: transparent;
+    border: none;
+}

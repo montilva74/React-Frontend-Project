@@ -1,0 +1,35 @@
+.title-cart{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.b-comprar {
+    background-color: black;
+    font-size: 20px;
+	text-decoration: none;
+    color: white;
+    padding: 20px 40px;
+}
+.b-comprar:hover{
+    color: darkgrey;
+    text-decoration: none;
+}
+.s{
+    text-decoration: none;
+    color: red;
+    font-size: 15px;
+}
+.s:hover{
+    color: darkgray;
+}
+
+
+.dark_mode .title-cart, .dark_mode .subtotal {
+    color: white;
+}
+.dark_mode #shoppingCart * {
+    color: white;
+}
+.dark_mode .item_cantidad {
+    color: black;
+}
