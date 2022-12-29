@@ -2,10 +2,10 @@ import React from 'react';
 import "./ProductItem.css";
 
 //Este componente muestra el producto(imagen, nombre, precio)
-export default function ProductItem({id, img, name, precio, descuento, category}) {
+export default function ProductItem({id, img, name, precio, descuento}) {
 
   return (
-    <a href='/producto/id' className='product_a'>
+    <a href={`/producto/${id}`} className='product_a'>
         <div className='product'>
             <div className="product_image">
                 <img src={img} alt="producto"/>

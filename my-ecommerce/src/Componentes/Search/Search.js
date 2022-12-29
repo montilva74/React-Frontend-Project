@@ -77,6 +77,7 @@ export default function Search() {
                                         .map(item =>
                                             <Col xs="3" key={item.id}>
                                                 <ProductItem
+                                                    id={item.id}
                                                     img={item.image}
                                                     name={item.nombre}
                                                     precio={item.price}

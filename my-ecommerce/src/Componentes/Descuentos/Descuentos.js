@@ -10,7 +10,6 @@ import FiltroTallas from '../FiltroTallas/FiltroTallas';
 
 //Aqui se organizan los componentes relacionados con las categorias, para armar la vista categorias.
 export default function Descuentos() {
-    
     // Creamos la variable de Estado que va a guardar la eleccion del usuario
     const [ordenarPor, setOrdenarPor] = useState()
 
@@ -77,6 +76,7 @@ export default function Descuentos() {
                                         .map(item =>
                                             <Col xs="3" key={item.id}>
                                                 <ProductItem
+                                                    id={item.id}
                                                     img={item.image}
                                                     name={item.nombre}
                                                     precio={item.price}

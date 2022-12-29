@@ -1,7 +1,7 @@
 import React from 'react'
 import "./FiltroTallas.css"
 
-const FiltroTallas = ({tallas, setFiltroTalla}) => {
+const FiltroTallas = ({tallas, filtroTalla, setFiltroTalla}) => {
   return (
     <>
         <div className='tallas-title'>
@@ -10,7 +10,8 @@ const FiltroTallas = ({tallas, setFiltroTalla}) => {
         </div>
         <div className='lista_tallas'>
             { tallas.map( t =>
-                <div className='talla' key={t} onClick={ () => setFiltroTalla(t)}> {t} </div>
+                <div className={ t === filtroTalla ? "talla talla-selec" : "talla"}
+                    key={t} onClick={ () => setFiltroTalla(t)}> {t} </div>
             )}
         </div>
     </>

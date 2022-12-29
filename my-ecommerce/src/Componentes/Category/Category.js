@@ -74,7 +74,7 @@ export default function Category() {
             <Container>
                 <Row className="justify-content-md-center">
                     <Col xs="2">
-                        <FiltroTallas tallas={tallas} setFiltroTalla={setFiltroTalla}></FiltroTallas>
+                        <FiltroTallas tallas={tallas} filtroTalla={filtroTalla} setFiltroTalla={setFiltroTalla}></FiltroTallas>
                     </Col>
                     <Col xs="10">
                         <div>
@@ -90,6 +90,7 @@ export default function Category() {
                                         .map(item =>
                                             <Col xs="3" key={item.id}>
                                                 <ProductItem
+                                                    id={item.id}
                                                     img={item.image}
                                                     name={item.nombre}
                                                     precio={item.price}

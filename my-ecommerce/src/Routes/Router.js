@@ -6,6 +6,7 @@ import Home from "../Componentes/Home/Home";
 import Category from "../Componentes/Category/Category";
 import Search from "../Componentes/Search/Search";
 import Descuentos from "../Componentes/Descuentos/Descuentos";
+import DetalleProducto from "../Componentes/DetalleProducto/DetalleProducto";
 
 const Router = ( {children} ) => {
 
@@ -28,6 +29,7 @@ const Router = ( {children} ) => {
                 <Route path="/categories/:category/:tipo"   element={<Category />} />
                 <Route path="/buscador/:frase"              element={<Search />} />
                 <Route path="/descuentos"                   element={<Descuentos />} />
+                <Route path="/producto/:idProducto"         element={<DetalleProducto />} />
             </Routes>
 
         </BrowserRouter>

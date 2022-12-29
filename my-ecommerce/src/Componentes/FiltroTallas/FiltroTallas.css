@@ -22,6 +22,6 @@
     font-size: 14px;
     margin-left: 5px;
 }
-.talla:hover {
+.talla:hover, .talla-selec {
     background: lightgray;
 }

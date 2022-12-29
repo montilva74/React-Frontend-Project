@@ -1,0 +1,47 @@
+.img img{
+    margin-top: 25px;
+}
+
+.nombre_producto {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.precio_producto {
+    font-size: 30px;
+    font-weight: bold;
+}
+.titulo_lista {
+    padding-right: 10px;
+    font-size: 12px;
+}
+.lista_colores ul, .lista_tallas ul {
+    display: flex;
+    padding: 0;
+    margin-top: 10px;
+}
+.lista_colores li, .lista_tallas li {
+    font-size: 10px;
+    text-transform: capitalize;
+    list-style-type: none;
+    border: 1px solid darkgray;
+    padding: 2px 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.color-selec, .talla-selec {
+    background: lightgray;
+}
+
+.agregar_button {
+    height: 50px;
+    width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
