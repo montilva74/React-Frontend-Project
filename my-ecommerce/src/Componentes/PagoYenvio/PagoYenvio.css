@@ -1,0 +1,145 @@
+
+.Compra_main{
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.Compra_div_contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5vw;
+}
+
+.Compras_h3_titulos{
+    font-weight: 400;
+    margin: 3rem auto 2.2rem auto;
+}
+
+.Compra_PanelIzquierdo{
+    width: 50vw;
+}
+
+.Compra_fieldset{
+    display: flex;
+    justify-content: center;
+}
+
+.Compra_form_datos{
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Compra_form_datos > input{
+    margin: 0 0 1rem 0;
+    height: 40px;
+}
+
+.Compra_p_textos{
+    font-size: 1rem;
+}
+
+.Requerido{
+    color: red;
+}
+
+.Compra_boton_datos{
+    color: #fff;
+    background: #000;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/* SECCION DE COMPRA*/
+
+.Compra_section_datosDePago{
+    margin-top: 2rem;
+}
+
+.Compras_div_tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Compra_div_seleccion{
+    width: 15vw;
+    height: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 2rem;
+}
+
+.Compra_btn_pago{
+    color: #fff;
+    background: #000;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    width: 100%;
+}
+
+.Compra_antes{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Compra despues */
+
+.Compra_despues{
+    display: none;
+}
+
+.Compra_section_datosDePago{
+}
+.Compra_section_datosDePago{
+
+}
+
+/* panel derecho */
+
+.Compra_PanelDerecho{
+    width: 30vw;
+    margin-top: 120px;
+}
+
+.Compra_div_instrucciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    min-height: 300px;
+    background-color: rgb(221, 221, 221);
+
+}
+
+.Compra_div_instrucciones > p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 10px;
+}
+
+.Compras_div_resumen{
+    width: 30vw;
+    margin-top: 2rem;
+}
+
+.Compras_div_contenidoCarrito{
+    height: 95.8vh;
+}
+
+.Comprar_ocultar{
+    display: none;
+}

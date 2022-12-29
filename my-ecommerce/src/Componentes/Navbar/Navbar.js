@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
 import "./Navbar.css"
 import logo from "./logo.jpg";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faMagnifyingGlass, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 

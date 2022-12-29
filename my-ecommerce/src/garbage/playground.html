@@ -3,18 +3,17 @@ Para el Footer
     <div>
         <p>Store Fashion Clothes &copy; esta hecho por <img src="" alt="" onclick=""></p>
     </div>
--->
-<link rel="stylesheet" href="./Modal_Footer.css">
-<div clasName="Modal_Footer__container">
-    <h2 className="Modal_Footer__titulo">La gente detras de Team8</h2>
-    <ul className="Modal_Footer__ul">
-        <li className="Modal_Footer__li">
-            <img src="" alt="Foto">
-            <p className="Modal_Footer__text">Alba Montilva</p>
-            <a href=""><img src="" alt="mail" className="Modal_Footer__icon"></a><a href=""><img src="" alt="github" className="Modal_Footer__icon"></a>
-        </li>
-        <li className="Modal_Footer__li">
-            <img src="" alt="Foto">
+    <link rel="stylesheet" href="./Modal_Footer.css">
+    <div clasName="Modal_Footer__container">
+        <h2 className="Modal_Footer__titulo">La gente detras de Team8</h2>
+        <ul className="Modal_Footer__ul">
+            <li className="Modal_Footer__li">
+                <img src="" alt="Foto">
+                <p className="Modal_Footer__text">Alba Montilva</p>
+                <a href=""><img src="" alt="mail" className="Modal_Footer__icon"></a><a href=""><img src="" alt="github" className="Modal_Footer__icon"></a>
+            </li>
+            <li className="Modal_Footer__li">
+                <img src="" alt="Foto">
             <p className="Modal_Footer__text">Marcela Ojeda</p>
             <a href=""><img src="" alt="mail className="Modal_Footer__icon""></a><a href=""><img src="" alt="github" className="Modal_Footer__icon"></a>
         </li>
@@ -41,3 +40,170 @@ Para el Footer
     </ul>
     <p  className="Modal_Footer__li">Github del proyecto</p><img src="" alt="gihub"> 
 </div>
+
+
+-->
+    <link rel="stylesheet" href="playground.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;800&family=Yanone+Kaffeesatz:wght@400;600&display=swap" rel="stylesheet">
+
+    
+<Compra class="Compra_main">
+    <div class="Compra_div_contenedor">
+        <div class="Compra_PanelIzquierdo">
+            <div class="Compra_antes">
+                <section class="Compra_section_datosDelEnvio">
+                    <h5 class="Compras_h3_titulos">Ingresa los datos para el envio</h5>
+                    <fieldset class="Compra_fieldset">
+                        <form action="" method="post" class="Compra_form_datos">
+                            <p class="Compra_p_textos">Nombre  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_nombre" onclick="explanation(0)">
+                            <p class="Compra_p_textos">Apellido  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_apellido" onclick="explanation(1)">
+                            <p class="Compra_p_textos">Dirección  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_direccion" onclick="explanation(2)">
+                            <p class="Compra_p_textos">Localidad  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_localidad" onclick="explanation(3)">
+                            <p class="Compra_p_textos">Codigo Postal  <span class="Requerido">*</span></p>
+                            <input type="text" id="input_cp" onclick="explanation(4)">
+                            <p class="Compra_p_textos">Fecha deseable de entrega  <span class="Requerido">*</span></p>
+                            <input type="date" id="input_entrega" onclick="explanation(5)">
+                            <button id="btn_guardar" class="Compra_boton_datos">Guardar</button>
+                        </form>
+                    </fieldset>
+                </section>
+                <section class="Compra_section_datosDePago">
+                    <h5 class="Compras_h3_titulos">Seleciona tu tarjeta</h5>
+                    <fieldset>
+                        <form action="" method="post">
+                            <div class="Compras_div_tarjetas">
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="mercadopago" />
+                                    <input value="mercadopago" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="visa" />
+                                    <input value="visa" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="master" />
+                                    <input value="master" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="amex" />
+                                    <input value="amex" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="dinners" />
+                                    <input value="dinners" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="cabal" />
+                                    <input value="cabal" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="naranja" />
+                                    <input value="naranja" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="shopping" />
+                                    <input value="shopping" name="tarjetas" type="radio" />
+                                </div>
+                                <div class="Compra_div_seleccion">
+                                    <img src="" alt="nativa" />
+                                    <input value="nativa" name="tarjetas" type="radio" />
+                                </div>
+                            </div>
+                            <button class="Compra_btn_pago">Proceder a pagar</button>
+                        </form>
+                    </fieldset>
+                </section>
+            </div>
+            <div class="Compra_despues">
+                <h5 class="Compras_h3_titulos">Datos de la entrega</h5>
+                <fieldset>
+                    <p class="Compras_node"></p>
+                </fieldset>
+                <h5 class="Compras_h3_titulos">Datos del pago</h5>
+                <fieldset>
+                    <p class="Compras_node"></p>
+                </fieldset>
+            </div>
+        </div>
+        <div class="Compra_PanelDerecho">
+            <div class="Compra_div_instrucciones">
+                <p id="Compra_div_instrucciones_id"></p>
+            </div>
+            <div class="Compras_div_resumen">
+                <h5 class="Compras_h3_titulos">El contenido de tu carrito</h5>
+                <fieldset>
+                    <div class="Compras_div_contenidoCarrito"></div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</Compra>
+
+
+<script>
+    let lugar = document.getElementById('Compra_div_instrucciones_id');
+    function explanation(num){
+        let frase; 
+        switch(num) {
+            case 0:
+                frase = '"Nombre de la persona que recibe"';
+                break
+            case 1:
+                frase = '"Apellido de la persona que recibe"';
+                break
+            case 2:
+                frase = '"Calle y número"';
+                break
+            case 3:
+                frase = '"Ciudad del receptor"';
+                break
+            case 4:
+                frase = '"Codigo postal de la ciudad"';
+                break
+                case 5:
+                    frase = '"Fecha en que le gustaria que fuese entregado"';
+                    break
+                }
+                return lugar.innerText = frase;
+                
+    };
+    
+    // funcion de prueba
+    function mostrarGuardado (event){
+        event.preventDefault();
+        let textoComprobacion = "";
+        inputNombre2 = inputNombre.value;
+        inputApellido2 = inputApellido.value;
+        inputDireccion2 = inputDireccion.value;
+        inputLocalidad2 = inputLocalidad.value;
+        inputCp2 = inputCp.value;
+        inputEntrega2 = inputEntrega.value;
+
+        textoComprobacion = `Tu compra sera entregada a ${inputNombre2} ${inputApellido2} el dia ${inputEntrega2} en la calle ${inputDireccion2} de la localidad de codigo postal: ${inputCp2}.` 
+        return console.log(textoComprobacion)
+    }
+
+    function pagarYseguir (event) {
+        event.preventDefault();
+        antes.setAttribute('class',Comprar_ocultar);
+        despues.removeAttibute('class',Comprar_ocultar)
+
+    };
+
+    let inputNombre = document.getElementById('input_nombre');
+    let inputApellido = document.getElementById('input_apellido');
+    let inputDireccion = document.getElementById('input_direccion');
+    let inputLocalidad = document.getElementById('input_localidad');
+    let inputCp = document.getElementById('input_cp');
+    let inputEntrega = document.getElementById('input_entrega');
+    let botonGuardar = document.getElementById('btn_guardar');
+    botonGuardar.addEventListener('click', mostrarGuardado);
+
+    let antes = document.getElementsByClassName('Compras_antes');
+    let despues = document.getElementsByClassName('Comprar_despues');
+      
+</script>

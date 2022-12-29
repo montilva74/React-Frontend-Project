@@ -14,6 +14,7 @@ export default class Modal extends Component {
               <button style={styles.closeBtn} onClick={toggle}>X</button>
               <div>{children}</div>
             </div>
+            <div onClick={toggle} style={styles.back}/>
           </div>
         )
         }
@@ -49,5 +50,15 @@ const styles = {
     top: 0,
     right: 0,
     margin: 2,
-  }
+  },
+
+  back: {
+    background: 'rgba(0, 0, 0, 0.644)',
+    height: '100vh',
+    width: '100vw',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex:1,
+
 }

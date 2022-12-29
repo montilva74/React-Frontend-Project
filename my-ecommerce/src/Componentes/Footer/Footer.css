@@ -1,11 +1,116 @@
+.Footer_div_main h2{
+    font-weight: 700;
+}
+
+.Footer_div_main{
+    display: flex;
+    flex-direction: column;
+    gap: 2;
+    background: #000;
+}
+.Footer_div_superior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem;
+    flex-wrap: wrap;
+}
+
+/* estilos de la primera secciones*/
+.Footer_section_1{
+    color: #fff;
+    padding: 1rem 0;
+    width: 25vw;
+    margin-left: 12vw;
+}
+
+/* estilos de la segunda secciones*/
+.Footer_section_2{
+    color: #fff;
+    width: 25vw;
+}
+
+/* efectos sobre las secciones*/
+
+.Footer_section_1 img:hover{
+    color: #fff;
+    text-decoration: underline #fff; 
+    cursor: pointer;
+    margin: 1rem 1rem;
+}
+.Footer_section_1 img:active{
+        color: rgb(126, 125, 125);
+
+}
+
+.Footer_section_2 p:hover {
+    color: #fff;
+    text-decoration: underline #fff; 
+    cursor: pointer;
+}
+
+.Footer_section_2 p:active {
+    color: rgb(126, 125, 125);
+}
+
+/* estilos de la tercera secciones*/
+.Footer_section_3{
+    color: #fff;
+    width: 25vw;
+
+}
+
+.Footer_section_3 p:hover{
+    color: #fff;
+    text-decoration: underline #fff; 
+    cursor: pointer;
+}
+.Footer_section_3 p:active{
+        color: rgb(126, 125, 125);
+}
+
+.Footer_section_1 h2:nth-of-type(2){
+    margin: 1rem 0;
+}
+
+.logo_soc{
+    width: 50px;
+    height: 50px;
+}
+
+
+.Footer_div_newsletter{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Footer_input{
+    background-color: transparent;
+    color: #fff;
+}
+
+.Footer_button{
+    color: #fff;
+    border: #fff solid 1px;
+}
+
+.Footer__tarjetas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Footer__tarjetas img{
+    margin: 0.75rem;
+}
 
 .Footer__box{
     width: 100vw;
-    height: 150px;
+    height: 100px;;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
-    background: #000;
+    background-color: rgb(24, 24, 24);
 }
 .Paragraph{
     font-size: small;
