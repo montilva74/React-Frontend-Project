@@ -7,7 +7,7 @@ import "./MiniCarousel.css"
 function MinicarouselComponent () {
   return (
     <>
-    <Container className='mini-height'>
+    <Container className='mini-height d-none d-sm-none d-md-block'>
             <Row className='carousel-c'>
                 <Carousel>
                     <Carousel.Item>
