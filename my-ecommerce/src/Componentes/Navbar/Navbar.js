@@ -143,7 +143,6 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
 
                             </div>
                         }
-                        
                     </div>
                 </div>
                 <div className='d-block d-sm-none bg-dark mobile-menu'>
@@ -161,6 +160,12 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
                             <a className="menu_category" href="/categories/hombres">    HOMBRES         </a>
                             <a className="menu_category" href="/categories/mujeres">    MUJERES         </a>
                             <a className="menu_category" href="/categories/niños">      NIÑOS           </a>
+                            <a className='cart_link mt-0' href="/cart">
+                                <FontAwesomeIcon icon={faCartShopping} />
+                                {cartNumber  > 0 &&
+                                    <span className='cart_number d-flex justify-content-center'> {cartNumber} </span>
+                                }
+                            </a>
                         </div>
                     </div>
                     </div>

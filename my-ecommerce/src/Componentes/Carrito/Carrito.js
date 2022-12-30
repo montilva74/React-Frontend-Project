@@ -84,10 +84,10 @@ const Carrito = () => {
                 </div>
             </div>
             <div className="row mt-4 d-flex align-items-center">
-                <div className="col-sm-6 order-md-2 text-right">
+                <div className="col-xs-12 col-sm-6 order-md-2 text-right">
                     <a href="/" className=" mb-4 b-comprar">Comprar</a>
                 </div>
-                <div className="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
+                <div className="col-xs-12 col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left mt-5">
                     <a className='s' href="/">
                         * Seguir Comprando</a>
                 </div>
