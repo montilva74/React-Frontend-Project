@@ -47,7 +47,7 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
     return (
         <>
             <div className="grayborder">
-                <div className="container container-fluid pt-3 pb-4">
+                <div className="container container-fluid pt-3 pb-4 d-none d-sm-block">
                     <div className='row'>
                         <div className="menu-register d-flex justify-content-end">
                             <button className='darkbutton' onClick={() => toggleDarkMode(!isDarkMode)}>
@@ -110,7 +110,7 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
                         </div>
                     </div>
                 </div>
-                <div className='container'>
+                <div className='container d-none d-sm-block'>
                     <div className='row position-relative'>
                         {showSubmenu &&
                             <div className="submenu" onMouseLeave={() => setShowSubmenu(false)}>
@@ -145,6 +145,35 @@ const Navbar = ({ title, isDarkMode, toggleDarkMode }) => {
                         }
                         
                     </div>
+                </div>
+                <div className='d-block d-sm-none bg-dark mobile-menu'>
+                <div className="collapse" id="navbarToggleExternalContent">
+                    <div className="bg-dark p-4 mb-1">
+                        <div className='d-flex justify-content-end'>
+                            <a className="ml-1 px-2 menu_sublink" href="/register">     REGISTRO        </a>
+                            <a className="mr-1 px-2 menu_sublink" href="/login">        INICIAR SESION  </a>
+                            <button className='darkbutton' onClick={() => toggleDarkMode(!isDarkMode)}>
+                                <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+                                {isDarkMode ? "Modo Claro" : "Modo Oscuro"}
+                            </button>
+                        </div>
+                        <div className='d-flex justify-content-center mt-5'>
+                            <a className="menu_category" href="/categories/hombres">    HOMBRES         </a>
+                            <a className="menu_category" href="/categories/mujeres">    MUJERES         </a>
+                            <a className="menu_category" href="/categories/niños">      NIÑOS           </a>
+                        </div>
+                    </div>
+                    </div>
+                    <nav className="navbar navbar-dark bg-dark">
+                    <div className="container-fluid">
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <a href='/'>
+                            <img className="rounded float-start logo" src={logo} alt="logo" />
+                        </a>
+                    </div>
+                    </nav>
                 </div>
             </div>
         </>

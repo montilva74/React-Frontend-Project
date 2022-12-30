@@ -126,3 +126,11 @@
 .search_button {
     cursor: pointer;
 }
+
+.mobile-menu a {
+    color: white;
+}
+
+.dark_mode .mobile-menu .darkbutton, .light_mode .mobile-menu .darkbutton {
+    color: white;
+}

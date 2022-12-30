@@ -67,17 +67,20 @@ export default function Category() {
     }, [filtroCategoriaTipo])
 
     return (
-
         <div>
             <TitleCategory name={category}></TitleCategory>
             <Banner imagen={`../../catimages/${catImages[category]}`}></Banner>
 
             <Container>
                 <Row className="justify-content-md-center">
-                    <Col xs="2">
-                        <FiltroTallas tallas={tallas} filtroTalla={filtroTalla} setFiltroTalla={setFiltroTalla}></FiltroTallas>
+                    <Col xs={12} md={2}>
+                        <FiltroTallas
+                            tallas={tallas}
+                            filtroTalla={filtroTalla}
+                            setFiltroTalla={setFiltroTalla}
+                        ></FiltroTallas>
                     </Col>
-                    <Col xs="10">
+                    <Col xs={12} md={10}>
                         <div>
                             <Ordenar setOrdenarPor={setOrdenarPor}></Ordenar>
                         </div>
@@ -85,11 +88,11 @@ export default function Category() {
                             <Container>
                                 <Row>
                                     {productos
-                                        .filter(p => filtroCategoriaTipo(p))
-                                        .filter(p => filtroPorTalla(p))
+                                        .filter((p) => filtroCategoriaTipo(p))
+                                        .filter((p) => filtroPorTalla(p))
                                         .sort((a, b) => ordenarProductos(a, b))
-                                        .map(item =>
-                                            <Col xs="3" key={item.id}>
+                                        .map((item) => (
+                                            <Col xs={12} md={3} key={item.id}>
                                                 <ProductItem
                                                     id={item.id}
                                                     img={item.image}
@@ -98,15 +101,13 @@ export default function Category() {
                                                     descuento={item.descuento}
                                                 ></ProductItem>
                                             </Col>
-                                        )
-                                    }
+                                        ))}
                                 </Row>
                             </Container>
                         </div>
                     </Col>
                 </Row>
             </Container>
-
         </div>
-    )
+    );
 }

@@ -16,31 +16,46 @@ import logo_face from "../../Imagenes/facelog.png";
 import logo_inst from "../../Imagenes/instalogo.png";
 import logo_twitter from "../../Imagenes/twitterlogo.png";
 import logo_yt from "../../Imagenes/Youtube-Logo.png";
+import { Container, Row, Col } from "react-bootstrap"
 
-const Footer = () => 
-{
+const Footer = () => {
     const [active, setActive] = useState(false);
 
     const toggle = () => {
         setActive(!active);
     }
-   
-    return(
+
+    return  (
         <>
-            <div className="Footer_div_main">
-                <div className="Footer_div_superior">
+        <Container className="Footer_div_main">
+            <Row>
+                <Col xs={12} md={6}>
                     <section className="Footer_section_1">
                         <h5>Suscribite</h5>
                         <div className="Footer_div_newsletter">
-                            <input id="Footer_input" type="mail"/>
-                            <button className="Footer_button" >Suscribite</button>
+                            <input id="Footer_input" type="mail" />
+                            <button className="Footer_button">Suscribite</button>
                         </div>
                         <h5 className="follow_us">Seguinos</h5>
-                        <img alt="redes sociales" src={logo_face} className="logo_soc" />
-                        <img alt="redes sociales" src={logo_inst} className="logo_soc" />
-                        <img alt="redes sociales" src={logo_twitter} className="logo_soc" />
-                        <img alt="redes sociales" src={logo_yt} className="logo_soc"/>
+                        <img
+                            alt="redes sociales"
+                            src={logo_face}
+                            className="logo_soc"
+                        />
+                        <img
+                            alt="redes sociales"
+                            src={logo_inst}
+                            className="logo_soc"
+                        />
+                        <img
+                            alt="redes sociales"
+                            src={logo_twitter}
+                            className="logo_soc"
+                        />
+                        <img alt="redes sociales" src={logo_yt} className="logo_soc" />
                     </section>
+                </Col>
+                <Col xs={12} md={3}>
                     <section className="Footer_section_2">
                         <h5>De nosotros</h5>
                         <p>Tiendas</p>
@@ -51,6 +66,8 @@ const Footer = () =>
                         <p>Boton de cancelación</p>
                         <p>Para reclamos dirigirse aqui</p>
                     </section>
+                    </Col>
+                    <Col xs={12} md={3}>
                     <section className="Footer_section_3">
                         <h5>Menu</h5>
                         <p>Hombres</p>
@@ -58,7 +75,7 @@ const Footer = () =>
                         <p>Niños</p>
                         <p>Ventas</p>
                     </section>
-                </div>
+                    </Col>
                 <div className="Footer__tarjetas">
                     <img alt="" src={tarjeta_mercado} />
                     <img alt="" src={tarjeta_visa} />
@@ -77,11 +94,12 @@ const Footer = () =>
                         <img className="Team8Img" src={Team8} alt='team8' id='boton_modal' />
                     </button>
                     <Modal active={active} toggle={toggle}>
-                        <ModalFooter/>
+                        <ModalFooter />
                     </Modal>
                 </div>
-            </div>
-        </>  
+            </Row>
+        </Container>
+        </>
     )
 }
 export default Footer;
