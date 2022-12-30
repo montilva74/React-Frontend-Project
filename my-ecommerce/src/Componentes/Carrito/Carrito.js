@@ -1,20 +1,37 @@
 import React, { useState } from 'react'
 import productos from "./../../Api/products.json";
 import Carro from "./Carro.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 
 const Carrito = () => {
 
     // Obtener arreglo del carrito
     const cart = JSON.parse( localStorage.getItem("cart") )
+
     // Por cada elemento
     const carrito = cart.map( item => {
         const p = productos.find(p => p.id === item.id)
         return {...p, color: item.color, talla: item.talla, cantidad: item.cantidad}
     })
 
+    console.log("Carrito: ", carrito)
+
     const subTotal = carrito.reduce((suma, item) => parseFloat(suma) + parseFloat(item.price * item.cantidad) , 0)
 
+    const [ shoppingCart, setShoppingCart ] = useState(carrito)
+
+    const eliminarItemCart = (id, talla, color) => {
+        // crear un nuevo arreglo quitando el elemento que voy a eliminar
+        const nuevoCart = carrito.filter( item => !(item.id === id && item.talla === talla && item.color === color) )
+        setShoppingCart(nuevoCart)
+        localStorage.setItem("cart", JSON.stringify(nuevoCart))
+
+        const prodCount = nuevoCart.reduce((suma, item) => suma + parseInt(item.cantidad), 0);
+        localStorage.setItem("cartNumber", prodCount)
+        window.location.reload(false);
+    }
 
     return (
         <div className="container">
@@ -30,8 +47,8 @@ const Carrito = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {  carrito.map( item => 
-                            <tr>
+                            {  shoppingCart.map( (item, i) => 
+                            <tr key={i} >
                                 <td data-th="Producto">
                                     <div className="row">
                                         <div className="col-md-3 text-left">
@@ -40,12 +57,17 @@ const Carrito = () => {
                                         <div className="col-md-9 text-left mt-sm-2">
                                             <h4> {item.nombre} </h4>
                                             <p className="font-weight-light"> {item.tipo} - {item.color} - {item.talla} </p>
+                                            <div>
+                                                <FontAwesomeIcon
+                                                    onClick={() => eliminarItemCart(item.id, item.talla, item.color)}
+                                                    icon={faTrash} />
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td data-th="Precio"> {item.price} </td>
                                 <td data-th="Cantidad">
-                                    <input type="number" style={{color: "black"}} className="form-control form-control-lg text-center" value={item.cantidad}/>
+                                    <input type="number" style={{color: "black"}} className="form-control form-control-lg text-center" defaultValue={item.cantidad}/>
                                 </td>
                             </tr>
                             )}
