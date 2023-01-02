@@ -1,6 +1,6 @@
 # Presentación
 
-Este es un proyecto de ecommerce creado como clon de la página web de DC Shoes. Utiliza React como framework principal y ha sido desarrollado por el Team 8(Alba Montilva, Marcela Ojeda y Ariel Perrone) siguiendo el curso "Codo a Codo con React" comisión 22801 de [Alejandro Medici].
+Este es un proyecto de ecommerce creado como clon de la Página Web de DC Shoes. Utiliza React como framework principal,  Firebase y Bootstrap para el diseño responsive . Ha sido desarrollado por el Team 8(Alba Montilva, Marcela Ojeda y Ariel Perrone) siguiendo el curso "Codo a Codo con React" comisión 22801 de [Alejandro Medici].
 
 # Para instalar y ejecutar el proyecto, sigue estos pasos:
 
@@ -21,6 +21,8 @@ Este es un manual de usuario para el sitio web [MY-ECOMMERCE]. Este sitio web es
 - Visualización de los detalles de cada producto, incluyendo imágenes y descripciones
 - Agregado de productos al carrito de compras y procesamiento de pedidos
 - Gestión de cuenta de usuario y proceso de inicio de sesión
+- Dark Mode
+- Diseño Resonsive
 
 ## Cómo utilizar el sitio web
 
